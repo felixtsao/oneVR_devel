@@ -21,9 +21,11 @@ General Algorithm
 0. Using the first image as a reference, use the RANSAC generated homographies to transform the remaining input images to the appropriate pixels in the end panorama. Feather the overlaps with linear falloff in `feather_mask.m` and `main.c`.
 0. Output final panorama as `pano.jpg`
 
-Bugs:
+<h4>Bugs:</h4>
 Weird artifacts seen in `pano_cyl_artifacts.jpg` due to blending when projecting onto cylinder.
 <p>
 No artifacts when not projecting onto cylinder as seen in `pano.jpg` but this method produces unwanted distortions.
+<p>
+Evident in sample input, some images overlap an area with a non-directly adjacent image, need to modify feathering technique to account for this.
 <p>
 Also, for some reason, script only outputs composite of first 4 images. May be a limitiation of MATLAB function `imwrite()`. Will look into at a later time.
