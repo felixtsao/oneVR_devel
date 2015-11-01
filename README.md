@@ -1,9 +1,13 @@
 # panorama_devel
-Project done in a Computational Photography class that stiches a set of input images together to create a realistic panorama.
+Project done in a Computational Photography class that stitches a set of input images together to create a realistic panorama.
 <p>
 Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
 <p>
-Planning to port everything to Python/NumPy for continued development since MATLAB is proprietary.
+Plans
+-----
+0. Planning to port everything to Python/NumPy for continued development since MATLAB is proprietary. Want to eventually release a free Virtual Reality (VR) video stitcher for amateur VR photographers as current stitching packages are expensive.
+1. Currently only works with still photographs; will need to extend to stereoscopic video.
+2. Current projection method is done using inverse cylindrical coordinates; want to cover a full 4π steradian FOV so will need to transition to using a spherical projection or cubic projection.
 
 Brief Usage
 -----------
