@@ -1,5 +1,5 @@
 # panorama_devel
-Project done in a Computational Photography class that stitches a set of input images together to create a realistic panorama.
+Project started from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama.
 <p>
 Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
 <p>
