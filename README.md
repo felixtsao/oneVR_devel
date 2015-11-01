@@ -7,7 +7,7 @@ Planning to port everything to Python/NumPy for continued development since MATL
 
 Brief Usage
 -----------
-The scripts currently works with all files in the same directory and stitches together a set of `/input_images`.
+The scripts currently work with all files in the same directory and stitches together a set of `/input_images`.
 <p>
 Only intended adjustable user parameter is the focal length `f` in `main.c` which depends on the camera that generated the `/input_images`.
 
