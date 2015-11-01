@@ -7,7 +7,7 @@ Plans
 -----
 0. Planning to port everything to Python/NumPy for continued development since MATLAB is proprietary. Want to eventually release a free Virtual Reality (VR) video stitcher for amateur VR photographers as current stitching packages are expensive.
 1. Currently only works with still photographs; will need to extend to stereoscopic video.
-2. Current projection method is done using inverse cylindrical coordinates; want to cover a full 4π steradian FOV so will need to transition to using a spherical projection or cubic projection.
+2. Current projection method is done using inverse cylindrical coordinates; want to cover a full 4π steradian FOV so may transition to using a spherical projection or cubic projection if beneficial. Seems like cubic projection is computationally more efficient but may result in undesired degradation of image quality.
 
 Brief Usage
 -----------
