@@ -78,7 +78,7 @@ end
 
 % Use newly created cylindrical projections for feature detection
 imagepath = 'cylindrical_maps';
-
+%}
 %%======================================================================
 %% 2. Compute feature points, 3. Compute homographies
 %
@@ -260,11 +260,15 @@ panorama_image = panorama_image + warped_images{1};
 
 % At each boundary of input images...
 for i = 2 : length(warped_images)
+    
+    % Keep copy of panorama from last iteration
+    panorama_orig = panorama_image;
+    
     % Draw newer image one on top of the existing panorama
     panorama_image = panorama_image + warped_images{i};
     
     % With both images...
-    img1 = warped_images{i - 1};
+    img1 = panorama_orig;
     img2 = warped_images{i};
     
     % Apply feathering mask...
