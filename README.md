@@ -1,9 +1,10 @@
 # VR
-Project extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama.
+<h3> Software Component </h3>
+Project extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama. Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
 <p>
-Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
-<p>
-Monoscopic and stereoscopic VR camera mounts designed in OpenSCAD
+<h3> Hardware Component </h3>
+Monoscopic and stereoscopic VR camera mounts designed in OpenSCAD specifically for SJCAM4000
+
 Plans
 -----
 0. Planning to port everything to C++ for continued development since MATLAB is proprietary. Want to eventually release a free Virtual Reality (VR) video stitcher for amateur VR photographers as current stitching packages are expensive.
