@@ -1,5 +1,5 @@
 # One VR
-An end-to-end VR solution concept.
+An end-to-end VR pipeline solution concept.
 <br>
 Handles 360 video capture, stitching and cross-platform VR display on mobile devices.
 <h3> Software Component </h3>
