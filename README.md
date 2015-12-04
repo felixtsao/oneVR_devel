@@ -7,7 +7,7 @@ Stitching algorithm extended from an assignment in a Computational Photography c
 <p>
 Cross platform display on mobile devices via web technologies. Can be viewed interactively via web browser, iOS and Android.
 <h3> Hardware Component </h3>
-3D printable monoscopic and stereoscopic VR camera mounts designed in OpenSCAD. Designs are specific to dimensions of SJCAM4000.
+3D printable monoscopic and stereoscopic VR camera mounts designed in OpenSCAD. Designs are specific to dimensions of SJCAM4000. Designs are parameterized and are easily adjustable to fit other small camera types.
 
 Plans
 -----
