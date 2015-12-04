@@ -1,4 +1,4 @@
-# Virtual Reality Development Repository
+# VR Development Repository
 An end-to-end VR solution concept.
 <br>
 Handles 360 video capture, stitching and cross-platform VR display on mobile devices.
@@ -7,7 +7,7 @@ Stitching algorithm extended from an assignment in a Computational Photography c
 <p>
 Cross platform display on mobile devices via web technologies. Can be viewed interactively via web browser, iOS and Android.
 <h3> Hardware Component </h3>
-Monoscopic and stereoscopic VR camera mounts designed in OpenSCAD specifically for SJCAM4000
+3D printable monoscopic and stereoscopic VR camera mounts designed in OpenSCAD. Designs are specific to dimensions of SJCAM4000.
 
 Plans
 -----
