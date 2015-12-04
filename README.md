@@ -5,7 +5,7 @@ Handles 360 video capture, stitching and cross-platform VR display on mobile dev
 <h3> Software Component </h3>
 Stitching algorithm extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama. Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
 <p>
-Cross platform VR display on mobile devices via web technologies. Can be viewed interactively via web browser, iOS and Android.
+Cross platform VR display on mobile devices via web technologies. Can be viewed interactively via desktop web browser, iOS and Android.
 <h3> Hardware Component </h3>
 3D printable monoscopic and stereoscopic VR camera mounts designed in OpenSCAD. Designs are specific to dimensions of SJCAM4000. Designs are parameterized and are easily adjustable to fit other small camera types.
 
