@@ -3,8 +3,9 @@ An end-to-end VR solution concept.
 <br>
 Handles 360 video capture, stitching and cross-platform display on mobile devices.
 <h3> Software Component </h3>
-Project extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama. Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
+Stitching algorithm extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama. Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
 <p>
+Cross platform display on mobile devices via web technologies. Can be viewed interactively via web browser, iOS and Android.
 <h3> Hardware Component </h3>
 Monoscopic and stereoscopic VR camera mounts designed in OpenSCAD specifically for SJCAM4000
 
