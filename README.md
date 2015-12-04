@@ -1,4 +1,4 @@
-# VR Development Repository
+# One VR
 An end-to-end VR solution concept.
 <br>
 Handles 360 video capture, stitching and cross-platform VR display on mobile devices.
