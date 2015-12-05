@@ -11,9 +11,7 @@ Cross platform VR display on mobile devices via web technologies. Can be viewed 
 
 Plans
 -----
-0. Planning to port everything to C++ for continued development since MATLAB is proprietary. Want to eventually release a free Virtual Reality (VR) video stitcher for amateur VR photographers as current stitching packages are expensive.
-1. Currently only works with still photographs; will need to extend to stereoscopic video.
-2. Current projection method is done using inverse cylindrical coordinates; want to cover a full 4π steradian FOV so may transition to using a spherical projection or cubic projection if beneficial. Seems like cubic projection is computationally more efficient but may result in undesired degradation of image quality.
+0. Currently only works with still photographs; will need to extend to stereoscopic video.
 
 Brief Usage
 -----------
