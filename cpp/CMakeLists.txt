@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( stitch )
+find_package( OpenCV REQUIRED )
+add_executable( a.out plzwork.cpp )
+target_link_libraries( a.out ${OpenCV_LIBS} )
