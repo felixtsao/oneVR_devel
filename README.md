@@ -34,7 +34,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 
 <h5> Software list </h5>
  * OpenSCAD for rapid, parameterized prototyping of a 3D printable VR camera mount
- * OpenCV and C++ programming used for determining translations and relative positioning between video streams
+ * OpenCV and C++ programming for determining translations and relative positioning between video streams
  * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile VR viewer 
  * After Effects for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
 
