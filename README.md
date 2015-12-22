@@ -5,7 +5,7 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 <p>
-Listed below are items I have tested but any of them can be swapped out with another other item that serves a similar purpose.
+Listed below are items I have tested but any of them can be swapped out with another other item that serves a similar purpose. Addtionally, more cameras are ideal, but drive up cost and require a more powerful computer.
 
 <h3> Hardware </h3>
  * 6x SJ4000 action cameras
