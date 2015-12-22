@@ -3,12 +3,12 @@
 <br>
 A virtual reality camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 
-<h3> Hardware Component </h3>
+<h3> Hardware </h3>
  * 6x SJ4000 action cameras
  * 3D printable circular camera mount
  * Standard Tripod
  * Relatively powerful GPU for image processing preferred
- * 
+ <p>
 <img src="/cad/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
 <img src="/cad/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
 
@@ -31,7 +31,7 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 
 <p>
 Cross platform VR display on mobile devices via web technologies. Can be viewed interactively via desktop web browser, iOS and Android.
-<h3> Hardware Component </h3>
+<h3> Hardware </h3>
 // TODO
 
 General Algorithm
