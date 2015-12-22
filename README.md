@@ -34,7 +34,7 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
  2. Login with user "demo@felixtsao.com" and password "demo"
  3. Tap Exhibit and download files
  4. Tap view and find a listing that interests you
- 5. Tap the listing and put your phone into a [[https://www.google.com/get/cardboard/|cardboard viewer]]
+ 5. Tap the listing and put your phone into a [cardboard viewer](https://www.google.com/get/cardboard/).
  6. Enjoy your VR experience!
 <p>
 
