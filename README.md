@@ -11,7 +11,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 `/cpp` - Current automated video stitching development <br>
 `/cad` - 3D printable model files (`.stl`) and generator files (`.scad`), organized by camera model <br>
-`/ionic` - Cross-platform mobile VR viewer application built using Ionic Framework <br>
+`/ionic` - Cross-platform mobile VR viewer application built using the Ionic Framework <br>
 `/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference
 
 <h3> Hardware </h3>
@@ -33,7 +33,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 <h3> Software </h3>
  * OpenSCAD for rapid, parameterized prototyping of a 3D printable VR camera mount
  * OpenCV and C++ programming used for determining translations and relative positioning between video streams
- * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile phone viewer 
+ * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile VR viewer 
  * After Effects for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
 
 <img src="/ionic/img_ref/exhibit.jpg" alt="Exhibit" width="820px"/>
