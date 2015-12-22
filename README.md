@@ -3,7 +3,7 @@
 <br>
 A virtual reality camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
-Designs based around using off-the-shelf items to create a VR system. 3D printable camera mounts for arbitrary camera dimensions can be easily generated with base parameterized models.
+Designs based around using off-the-shelf items to create a VR system. Parameterized 3D model file allows for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 
 <h3> Hardware </h3>
  * 6x SJ4000 action cameras
