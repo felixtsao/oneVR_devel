@@ -49,7 +49,7 @@ Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes 4 
 
 Current Development
 --------------------
-Automated stitching using OpenCV 3.0.0
+Automated stitching process using OpenCV 3.0.0
 
 <h4>Bugs:</h4>
 // TODO
