@@ -1,5 +1,5 @@
 # One VR
-<h3> An end-to-end VR solution concept </h3>
+<h3> A low-cost, end-to-end VR solution concept </h3>
 <br>
 A virtual reality camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 
