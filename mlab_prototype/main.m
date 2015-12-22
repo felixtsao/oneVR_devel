@@ -1,21 +1,22 @@
 %%======================================================================
-%% Script to create a panorama image from a sequence of images in 'imagepath' directory.
+%% Script to create a panorama image from a sequence of images in `imagepath' directory.
+%
+% Note:  This skeleton code does NOT include all steps or all details
+% required.
 %
 % Hint: This script is divided into several code sections delimited by the
 % double percentage sign '%%'. Click 'Editor > Run Section' in MATLAB to
 % run your current code section.
 % 
 %%======================================================================
-%% 1. Image Acquisition
+%% 1. Take images
 % 
 % Change the following to the folder containing your input images
-
 clear;
 %imagepath = 'test';
 %addpath '.\test';
 imagepath = 'input_images';
 addpath '.\input_images';
-
 % Assumes images are in order and are the *only*
 % files in this directory.
 % 
@@ -28,12 +29,11 @@ addpath '.\input_images';
 
 files = dir(imagepath);
 initlist = files(3:end);
-
-mkdir('cylindrical_maps'); % Helper directory, gets deleted at the end
+mkdir('cylindrical_maps');
 %addpath '.\cylindrical_maps';
 
 % Choose a focal length that looks right for particular input
-f = 2000;
+f = 400;
 
 for i=1:length(initlist)
     
@@ -46,7 +46,7 @@ for i=1:length(initlist)
 
     cyl_map = zeros(y_size, x_size, 3);
 
-    % For each pixel in the unwrapped cylinder...
+    % For each pixel in an unwrapped cylinder...
     for y_cyl = 1 : y_size
         for x_cyl = 1 : x_size
         
@@ -61,7 +61,7 @@ for i=1:length(initlist)
             x = round(f * x_hat / z_hat + x_center);
             y = round(f * y_hat / z_hat + y_center);
    
-            % ...to populate the unwrapped cylindrical map
+            % ...to populate the unwrapped cylindrical map.
             if (x > 0 && x <= x_size && y > 0 && y <= y_size)
                 cyl_map(y_cyl, x_cyl, :) = img(y, x, :);
             end
@@ -78,12 +78,12 @@ end
 
 % Use newly created cylindrical projections for feature detection
 imagepath = 'cylindrical_maps';
-%}
+
 %%======================================================================
 %% 2. Compute feature points, 3. Compute homographies
 %
-% Modified calcH function to implement RANSAC algorithm for finding better
-% homographies.
+% Modify the calcH function to add code for implementing RANSAC.
+% You do not have to modify this code section.
 %
 % Here we compute feature points and the homography matrices between
 % adjacent input images. Homography matrices between adjacent input images
@@ -94,7 +94,6 @@ files = dir(imagepath);
 
 % Eliminate . and .. and assume everything else in directory is an input
 % image. Also assume that all images are color.
-
 imagelist = files(3:end);
 
 for i=1:length(imagelist)-1
@@ -102,8 +101,8 @@ for i=1:length(imagelist)-1
     image2 = fullfile(imagepath, imagelist(i+1).name);
       
     % Find matching feature points between current two images using SIFT
-    % features and SIFT algorithm for matching.
-
+    % features and SIFT algorithm for matching. Note that this code does
+    % NOT include the use of RANSAC to find and use only good matches.
     [~, matchIndex, loc1, loc2] = match(image1, image2);
     im1_ftr_pts = loc1(find(matchIndex > 0), 1:2);
     im2_ftr_pts = loc2(matchIndex(find(matchIndex > 0)), 1:2);
@@ -112,8 +111,9 @@ for i=1:length(imagelist)-1
     % into coordinates in image1. Function calcH currently uses all pairs
     % of matching feature points returned by the SIFT algorithm.
 
-    % Modified calcH function to add code for implementing RANSAC.
+    % Modify the calcH function to add code for implementing RANSAC.
     H = calcH(im1_ftr_pts, im2_ftr_pts);
+    %H = c(im1_ftr_pts, im2_ftr_pts);
     H_list(i) = {H};
 end
 
@@ -141,16 +141,17 @@ end
 % Matlab. For more info on using cell arrays, see:
 % http://www.mathworks.com/help/matlab/matlab_prog/what-is-a-cell-array.html
 
+%------------- YOUR CODE STARTS HERE -----------------
 % 
 % Compute new homographies H_map that map every other image *directly* to
 % the reference image 
 %
 % To create wide panorama, project input images on cylindrical coordinates
-% and use homographies found from 2 & 3 to determine angular translation
+% and use homographies found in 2 & 3 to determine angular translation
 % between images.
 
-% If choosing center image as reference
-% ref_index = floor(length(imagelist) / 2) + 1;
+% Choose reference image
+%ref_index = floor(length(imagelist) / 2) + 1;
 
 % First image as reference
 H_map(1) = {eye(3)}; %ID
@@ -164,6 +165,8 @@ H_31 = H_21 * H_32;
 H_map(3) = {H_31};
 H_41 = H_21 * H_32 * H_43;
 H_map(4) = {H_41};
+
+%------------- YOUR CODE ENDS HERE -----------------
 
 % Compute the size of the output panorama image
 min_row = 1;
@@ -250,6 +253,7 @@ end
 % Initialize output image to black (0)
 panorama_image = zeros(panorama_height, panorama_width, 3);
 
+%------------- YOUR CODE STARTS HERE -----------------
 %
 % Modify the code below to blend warped images together via feathering The
 % following code adds warped images directly to panorama image. This is a
@@ -260,15 +264,11 @@ panorama_image = panorama_image + warped_images{1};
 
 % At each boundary of input images...
 for i = 2 : length(warped_images)
-    
-    % Keep copy of panorama from last iteration
-    panorama_orig = panorama_image;
-    
     % Draw newer image one on top of the existing panorama
     panorama_image = panorama_image + warped_images{i};
     
     % With both images...
-    img1 = panorama_orig;
+    img1 = warped_images{i - 1};
     img2 = warped_images{i};
     
     % Apply feathering mask...
@@ -305,6 +305,12 @@ for i = 2 : length(warped_images)
     end        
 end
 
-imwrite(panorama_image, 'pano.jpg'); % Final panorama
+%imshow(panorama_image);
+imwrite(panorama_image, 'ftsao.jpg');
 
-rmdir('cylindrical_maps', 's'); % Remove helper directory
+%rmdir('cylindrical_maps', 's');
+
+% Save your final output image as a .jpg file and name it according to
+% the directions in the assignment.  
+%
+%------------- YOUR CODE ENDS HERE -----------------

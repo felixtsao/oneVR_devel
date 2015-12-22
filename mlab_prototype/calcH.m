@@ -14,11 +14,12 @@ function H = calcH(p1, p2)
 %     p2 from image2 to image1.
 
 n = size(p1, 1);
-if n < 4
+if n < 1
     error('Not enough points');
 end
 H = zeros(3, 3);  % Homography matrix to be returned
 
+%------------- YOUR CODE STARTS HERE -----------------
 % 
 % The following code computes an homography matrix, H, using all feature points
 % in p1 and p2. Modify it to compute a homography matrix using the inliers
@@ -57,7 +58,7 @@ for ransac = 1 : 100
     count = 0;
     good_points = zeros(n);
     
-    % Check accuracy of homography with all other feature pairs
+    % Check accuracy of homography with all feature pairs
     for j = 1 : n
         p = ones(3, 1);
         p(1) = p2(j, 1);
@@ -75,7 +76,6 @@ for ransac = 1 : 100
     end
     
     % Check to see if this new homography is even better than previous ones
-    % Keep it as reference if so, as well as the set of points that make it
     if(count > best_count)
         best_count = count;
         best_points = good_points;
@@ -83,7 +83,7 @@ for ransac = 1 : 100
     end
 end
 
-% Gather best points found into contiguous list
+% Gather best points into contiguous list
 best_points_list = zeros(best_count);
 
 j = 1;
@@ -107,3 +107,5 @@ end
 
 x = (A\b)';
 H = [x(1:3); x(4:6); x(7:9)];
+
+%------------- YOUR CODE ENDS HERE -----------------
