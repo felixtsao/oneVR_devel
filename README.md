@@ -21,8 +21,8 @@ Listed below are items I have tested but any of them can be swapped out with oth
  * Standard computer, relatively powerful GPU for image processing preferred
 <p>
 <center>
-<img src="/cad/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
-<img src="/cad/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
+<img src="/cad/sj4000/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
+<img src="/cad/sj4000/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
 </center>
 
 <h4> About the multi-camera system </h4>
@@ -56,8 +56,8 @@ Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes ab
 
 Files are located in `/cad` directory, organized by camera model. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance from the optical center and make additional copies of the trenches and rotate accordingly.
 
-<img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
-<img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
+<img src="/cad/sj4000/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
+<img src="/cad/sj4000/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 
 Current Development
 --------------------
