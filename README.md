@@ -2,12 +2,14 @@
 <h3> A low-cost, end-to-end VR solution concept </h3>
 <br>
 A virtual reality camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
+<p>
+Designs based around using off-the-shelf items to create a VR system. 3D printable camera mounts for arbitrary camera dimensions can be easily generated with base parameterized models.
 
 <h3> Hardware </h3>
  * 6x SJ4000 action cameras
  * 3D printable circular camera mount
  * Standard Tripod
- * Relatively powerful GPU for image processing preferred
+ * Standard computer, relatively powerful GPU for image processing preferred
 <p>
 <center>
 <img src="/cad/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
@@ -18,7 +20,6 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
 Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
 4K Demo Footage: https://www.youtube.com/watch?v=lM7lKqry0ZM
-
 
 <h3> Software </h3>
  * OpenSCAD for rapid, parameterized prototyping of a 3D printable VR camera mount
