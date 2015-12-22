@@ -19,6 +19,8 @@ module.exports = [
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{}
+{
+    "cordova-plugin-screen-orientation": "1.4.0"
+}
 // BOTTOM OF METADATA
 });
