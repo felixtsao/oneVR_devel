@@ -47,9 +47,9 @@ Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes 4 
 <img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
 <img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 
-General Algorithm
------------------
-// TODO
+Current Development
+--------------------
+Automated stitching using OpenCV 3.0.0
 
 <h4>Bugs:</h4>
 // TODO
