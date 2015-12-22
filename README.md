@@ -3,35 +3,16 @@ An end-to-end VR pipeline solution concept.
 <br>
 Handles 360 video capture, stitching and cross-platform VR display on mobile devices.
 <h3> Software Component </h3>
-Stitching algorithm extended from an assignment in a Computational Photography class that stitches a set of input images together to create a realistic panorama. Scale Invariant Feature Transform (SIFT) feature detection code from `http://www.cs.ubc.ca/~lowe/keypoints/`
+// TODO
 <p>
 Cross platform VR display on mobile devices via web technologies. Can be viewed interactively via desktop web browser, iOS and Android.
 <h3> Hardware Component </h3>
-3D printable monoscopic and stereoscopic VR camera mounts designed in OpenSCAD. Designs are specific to dimensions of SJCAM4000. Designs are parameterized and are easily adjustable to fit other small camera types.
-
-Plans
------
-0. Currently only works with still photographs; will need to extend to stereoscopic video.
-
-Brief Usage
------------
-The scripts currently work with all files in the same directory and stitches together a set of `/input_images`.
-<p>
-Only intended adjustable user parameter is the focal length `f` in `main.c` which depends on the camera that generated the `/input_images`.
+// TODO
 
 General Algorithm
 -----------------
 
-0. Acquire images from `/input_images`
-0. Warp the `input_images` using inverse cylindrical coordinates (equations in `cylindrical.pdf`) to a helper directory `/cylindrical_maps`.
-0. Run SIFT (Scale Invariant Feature Transform) on cylindrical projections to detect feature points between all pairs of adjacent images. SIFT estimates Laplacian of Gaussian functionality (blob detection) by computing a set of difference of Gaussians across various parts of the image. Local extrema are identified as feature points in the image.
-0. Using a RANSAC (Random Sample Concensus) approach, randomly select 4 pairs of feature points to generate a homography (3x3 matrix transform) relating each pair of adjacent images. Test the homography on other pairs of feature points between the 2 adjacent images and make note if the homography is within a specified accuracy tolerance of 3 pixels. Repeat for 100 iterations, choosing another 4 random pairs of feature points, and return the homography that is most consistent among all the feature points. Code is in `calcH.m`
-0. Using the first image as a reference plane for the panorama, use the RANSAC generated homographies to transform the remaining input images to the appropriate pixels in the end panorama. Feather the overlapping regions with a linear opacity falloff from center of overlapping images. Code is found in `feather_mask.m` and `main.c`.
-0. Output final panorama as `pano.jpg`
+//TODO
 
 <h4>Bugs:</h4>
-Artifacts seen in `pano_cyl_artifacts.jpg` at input image borders due to deficiencies in blending when using cylindrical projections.
-<p>
-Artifacts disappear when using input images without cylindrical projection as seen in `pano.jpg` but this method results in unwanted distortions for wide FOV panoramas.
-<p>
-Also, for some reason, script only outputs composite of first 4 images. May be a limitiation of MATLAB function `imwrite()`. Will look into this at a later time.
+// TODO
