@@ -57,7 +57,7 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on a Rostock Max V2 as the mount is relatively large for that printer's heatbed and would begin curling at the edges from non-uniform heating or something.
 
 <h5> Creating a new camera mount </h5>
-Files are located in `/cad` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle.
+Files are located in `/cad` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
 <img src="/cad/sj4000/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
 <img src="/cad/sj4000/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
