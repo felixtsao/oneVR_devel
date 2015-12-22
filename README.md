@@ -8,9 +8,11 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
  * 3D printable circular camera mount
  * Standard Tripod
  * Relatively powerful GPU for image processing preferred
- <p>
+<p>
+<center>
 <img src="/cad/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
 <img src="/cad/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
+</center>
 
 <h4> About the multi-camera system </h4>
 Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
@@ -42,8 +44,8 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 
 Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on the Rostock Max V2 as the mount is relatively large for the printer and would begin curling at the edges from non-uniform heating or something.
 
-<img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="400px"/>
-<img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="400px"/>
+<img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
+<img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 
 General Algorithm
 -----------------
