@@ -14,7 +14,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 
 
 <h3> Hardware/Software </h3>
-Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Addtionally, using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. 6 SJ4000 cameras arranged like the picture below is barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view.
+Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Addtionally, using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. 6 SJ4000 cameras arranged like the picture below is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view.
 
 <h5> Hardware list </h5>
  * 6x SJ4000 action cameras
