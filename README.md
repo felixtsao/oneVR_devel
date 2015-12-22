@@ -42,6 +42,9 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 
 Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on the Rostock Max V2 as the mount is relatively large for the printer and would begin curling at the edges from non-uniform heating or something.
 
+<img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="400px"/>
+<img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="400px"/>
+
 General Algorithm
 -----------------
 // TODO
