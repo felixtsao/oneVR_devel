@@ -11,7 +11,8 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 `/cpp` - Current automated video stitching development <br>
 `/cad` - 3D printable model files (`.stl`) and generating files (`.scad`) <br>
-`/ionic` - Cross-platform mobile application built using Ionic Framework
+`/ionic` - Cross-platform mobile application built using Ionic Framework <br>
+`/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class
 
 <h3> Hardware </h3>
  * 6x SJ4000 action cameras
