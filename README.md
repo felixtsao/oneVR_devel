@@ -7,7 +7,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 <p>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Addtionally, using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching.
 
-<h3 Directories </h3>
+<h3> Directories </h3>
 
 `/cpp` - Current automated video stitching development <br>
 `/cad` - 3D printable model files (`.stl`) and generating files (`.scad`) <br>
