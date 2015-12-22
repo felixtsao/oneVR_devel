@@ -54,7 +54,7 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 
 <h3> 3D Printing </h3>
 
-Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on a Rostock Max V2 as the mount is relatively large for the printer and would begin curling at the edges from non-uniform heating or something.
+`mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on a Rostock Max V2 as the mount is relatively large for the printer and would begin curling at the edges from non-uniform heating or something.
 
 <h5> Creating a new camera mount </h5>
 Files are located in `/cad` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle.
