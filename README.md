@@ -65,9 +65,9 @@ Files are located in `/cad` directory, organized by camera model. To create a ne
 <img src="/cad/sj4000/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
 <img src="/cad/sj4000/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 
-Current Development
---------------------
+// TODO
+-------
 Automate video stitching process using OpenCV 3.0.0
 
 <h4>Bugs:</h4>
-`// TODO`
+`Report bugs here`
