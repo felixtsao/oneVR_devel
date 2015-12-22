@@ -5,7 +5,7 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 <p>
-Listed below are items I have tested but any of them can be swapped out with another other item that serves a similar purpose. Addtionally, using more cameras is ideal, but drives up cost and requires a more powerful computer.
+Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Addtionally, using more cameras is ideal, but drives up cost and requires a more powerful computer.
 
 <h3> Hardware </h3>
  * 6x SJ4000 action cameras
@@ -46,6 +46,8 @@ Exhibit is a hybrid, cross-platform mobile application that explores the new and
 <h3> 3D Printing </h3>
 
 Camera mount printed on a Makerbot Replicator 2 with Red PLA. The mount takes 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on the Rostock Max V2 as the mount is relatively large for the printer and would begin curling at the edges from non-uniform heating or something.
+
+Files are located in /cad directory. Camera dimensions are listed as variables at the top and should globally change across the mount. To add more cameras, simply increase the distance from the optical center and make additional copies of the trenches and rotate accordingly.
 
 <img src="/cad/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
 <img src="/cad/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
