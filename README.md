@@ -27,7 +27,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 <img src="/cad/sj4000/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
 </center>
 
-<h4> About the multi-camera system </h4>
+<h5> About the multi-camera system </h5>
 Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
 4K Demo Footage: https://www.youtube.com/watch?v=lM7lKqry0ZM
