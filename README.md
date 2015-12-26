@@ -32,7 +32,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 <p>
  6 SJ4000 cameras arranged like the picture below is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching.
 <p>
-4K Demo Footage: https://www.youtube.com/watch?v=lM7lKqry0ZM
+[4K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
 
 <h5> Software list </h5>
  * OpenSCAD for rapid, parameterized prototyping of 3D printable VR camera mounts
@@ -42,7 +42,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
  * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
 
 <h5> Stitching Technique 1: By-Hand in After Effects </h5>
-Video Tutorial: https://www.youtube.com/watch?v=5elOFvyL4KA
+[Video Tutorial](https://www.youtube.com/watch?v=5elOFvyL4KA)
 
 <h5> Stitching Technique 2: Automated C++/OpenCV algorithm</h5>
 Still in development, check back soon!
