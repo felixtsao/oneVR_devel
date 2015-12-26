@@ -73,6 +73,6 @@ Files are located in `/cad` directory, organized by camera model. To create a ne
 
 <h3> // TODO </h3>
  * Automate video stitching process using OpenCV 3.0.0 <br>
- * Video Tutorial for hand-stitching 360 videos
+ * <strike>Make video tutorial for hand-stitching 360 videos</strike>
 <h4>Bugs:</h4>
 `Report bugs here`
