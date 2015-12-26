@@ -41,6 +41,12 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
  * Parse backend API for content distribution i.e. VR content to mobile VR viewer applications
  * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
 
+<h5> Stitching Technique 1: By-Hand in After Effects </h5>
+Video Tutorial: https://www.youtube.com/watch?v=5elOFvyL4KA
+
+<h5> Stitching Technique 2: Automated C++/OpenCV algorithm</h5>
+Still in development, check back soon!
+
 <img src="/ionic/img_ref/exhibit.jpg" alt="Exhibit" width="820px"/>
 
 <h5> Mobile application description </h5>
