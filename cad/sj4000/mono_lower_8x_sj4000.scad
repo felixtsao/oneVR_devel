@@ -1,6 +1,6 @@
 $fn=200;
 
-distance = 50; // distance from optical center
+distance = 70; // distance from optical center
 
 // trench dimensions (mm)
 // add 1 to dimension for a little wiggle room
@@ -13,13 +13,13 @@ lenset = 5;
 lenslift = -10;
 lensdist = (distance + 12);
 
-num_cameras = 6; // number of cameras
+num_cameras = 8; // number of cameras
 angular_disp = 360 / num_cameras; // angle between each camera
 
 difference(){
 
     // apparatus
-    cylinder(h = 15, r = 1.36 * distance, center = true);
+    cylinder(h = 15, r = 1.24 * distance, center = true);
 
     // trench holding camera 0
     translate([distance, 0, 3])
@@ -30,11 +30,11 @@ difference(){
         
     // trench holding camera 1
     rotate([0,0, angular_disp * 1]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
-    rotate([0,90,0])
-    translate([lenslift, lenset, lensdist])
-    cylinder(h = 12, r = 12.5, center = true);
+        translate([distance, 0, 3])
+        cube(size = [length, width, depth], center = true);
+        rotate([0,90,0])
+        translate([lenslift, lenset, lensdist])
+        cylinder(h = 12, r = 12.5, center = true);
     }
 
     // trench holding camera 2
@@ -73,9 +73,27 @@ difference(){
     cylinder(h = 12, r = 12.5, center = true);
     }
 
+    // trench holding camera 6
+    rotate([0,0, angular_disp * 6]){
+    translate([distance, 0, 3])
+    cube(size = [length, width, depth], center = true);
+    rotate([0,90,0])
+    translate([lenslift, lenset, lensdist])
+    cylinder(h = 12, r = 12.5, center = true);
+    }
+
+    // trench holding camera 7
+    rotate([0,0, angular_disp * 7]){
+    translate([distance, 0, 3])
+    cube(size = [length, width, depth], center = true);
+    rotate([0,90,0])
+    translate([lenslift, lenset, lensdist])
+    cylinder(h = 12, r = 12.5, center = true);
+    }
+
     // center dip feature
     translate([0, 0, depth - 6])
-    cylinder(h = 12, r = 30, center = true);
+    cylinder(h = 12, r = distance - 25, center = true);
 
     // clearance hole for 1/4 20 bolt
     cylinder(h = 30, r = 3.18, center = true);
