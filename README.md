@@ -47,7 +47,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 <h5> Stitching Technique 2: Automated C++/OpenCV algorithm</h5>
 Still in development, check back soon!
 
-<img src="/viewer/img_ref/exhibit.jpg" alt="Exhibit" width="820px"/>
+<img src="/ionic/img_ref/exhibit.jpg" alt="Exhibit" width="820px"/>
 
 <h5> Mobile application description </h5>
 Exhibit is a hybrid, cross-platform mobile application that explores the new and exciting virtual reality experience of viewing homes, apartments and new properties. With a few swipes, users can navigate an intuitive search feature and instantly find themselves standing in the room they want to see via photosphere or videosphere. Users can look around as if they're actually at the property which is made possible through the sophisticated use of gyroscopic sensors and projective geometry. For sellers, adding or modifying listings happens instantly and easily through a Parse database. From home owners to budding and mature businesses, Exhibit aims to bring the best places, to the best people, in the best way. Made with some cool friends.
