@@ -7,10 +7,10 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 
 <h3> Directories </h3>
 
+`/cam` - 3D printable model files (`.stl`), generator files (`.scad`) and camera control commands organized by camera model <br>
 `/cpp` - Automated video stitching development <br>
-`/cad` - 3D printable model files (`.stl`) and generator files (`.scad`), organized by camera model <br>
-`/ionic` - Cross-platform mobile VR viewer application built using the Ionic Framework <br>
 `/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference
+`/viewer` - Cross-platform web VR viewer application built using the Ionic Framework <br>
 
 
 <h3> Hardware/Software </h3>
