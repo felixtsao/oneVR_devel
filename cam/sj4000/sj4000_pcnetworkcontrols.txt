@@ -1,0 +1,42 @@
+If you browse to 192.168.1.254 in a web browser you can access the file system and copy the movies from the SD card onto your PC.
+
+To view a live stream from the camera you will need VLC Player. Launch VLC player and from the Media menu select open Network stream. in the URL box type: rtsp://192.168.1.254/sjcam.mov and then click Play. You will now see the video being streamed into VLC.
+
+Next up are the caemra controls. These are a little more tricky and I haven't investigated them all fully yet but here goes. To run any of these commands just enter them into a web browser:
+
+To start the camera recording: http://192.168.1.254/?custom=1&cmd=2001&par=1
+
+To stop the camera recording: http://192.168.1.254/?custom=1&cmd=2001&par=0
+
+To list all the current settings on the camera: http://192.168.1.254/?custom=1&cmd=3014
+
+The above will give you all the settings in an XML format. The simple ones will be 0 for off and 1 for on. Some settings like resolution can have multiple options like 1,2,3,4,5 for the different menu items. This would need to be documented fully by looking in the android app and listing all the values.
+
+To change a setting just do: http://192.168.1.254/?custom=1&cmd={CommandHere}&par={OptionHere}
+
+I think the options will be as follows but I have not tested all of them:
+
+<Cmd>2002</Cmd> Resolution
+<Cmd>2003</Cmd> Cyclic Record
+<Cmd>2004</Cmd> WDR
+<Cmd>2006</Cmd> Motion Detection
+<Cmd>2007</Cmd> Audio
+<Cmd>2008</Cmd> Date Stamp
+<Cmd>2010</Cmd> Live View Size
+<Cmd>1004</Cmd> Capture Mode
+<Cmd>1002</Cmd> Image Size
+<Cmd>1005</Cmd> Quality
+<Cmd>1006</Cmd> Sharpness
+<Cmd>1007</Cmd> White Balance
+<Cmd>1008</Cmd> Color
+<Cmd>1009</Cmd> ISO
+<Cmd>2005</Cmd> Exposure
+<Cmd>1011</Cmd> Anti Shake
+<Cmd>3025</Cmd> Frequency
+<Cmd>3026</Cmd> Rotate
+<Cmd>3011</Cmd> Reset to Defaults
+<Cmd>3010</Cmd> Format
+<Cmd>3007</Cmd> Auto Power Off
+<Cmd>3003</Cmd> WiFiName
+<Cmd>3004</Cmd> Password
+<Cmd>3008</Cmd> DV Language
