@@ -1,0 +1,147 @@
+<ion-view title="Exhibit">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="clearSearchField()" ng-show="search2.length">
+            Clear Search
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-stable" ng-click="openModal()">
+            Filter by...
+        </button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="search2" placeholder="Search">
+        </label>
+    </div>
+    <ion-content class="has-subheader">
+        <ion-refresher on-refresh="refreshList()"></ion-refresher>
+        <ion-list can-swipe="true">
+            <ion-item ng-repeat="data in dataList
+            | filter: search
+            | filter: search2"
+            class="item item-thumbnail-left item-text-wrap"
+                      href="#/tab/list/{{data.objectID}}" >
+                <img src="{{data.thumbnail._url}}" alt="preview">
+                <h2>{{data.city}}</h2>
+                <h2>{{data.address}}</h2>
+                <h3>${{data.price}}</h3>
+                <h4>{{data.sqft}} sqft, Beds: {{data.beds}}, Baths: {{data.baths}}</h4>
+                <p>{{data.title}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+<script id="search-modal.html" type="text/ng-template">
+  <div class="modal">
+    <ion-header-bar>
+      <h1 class="title">Search Listings</h1>
+      <!--<button class="button button-stable" ng-click="closeModal()">
+          <i class = "icon ion-close-round"></i>
+      </button>-->
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">City</span>
+              <input type="text" ng-model="search.city">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input item-select">
+              <span class="input-label">Beds</span>
+              <select ng-model="search.beds">
+                <option></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </label>
+          </div>
+          <div class="col">
+            <label class="item item-input item-select">
+              <span class="input-label">Baths</span>
+              <select ng-model="search.baths">
+                <option></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">Price (exact)</span>
+              <input type="text" ng-model="search.price">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">Squarefootage (exact)</span>
+              <input type="text" ng-model="search.sqft">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input item-select">
+              <span class="input-label">Pets</span>
+              <select ng-model="search.pets">
+                <option value=true>Yes</option>
+                <option value=false selected>No</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">Zip code</span>
+              <input type="text" ng-model="search.zip">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">Address</span>
+              <input type="text" ng-model="search.address">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <span class="input-label">Description</span>
+              <input type="text" ng-model="search.title">
+            </label>
+          </div>
+        </div>
+      </ion-list>
+
+      <button class="button button-block button-stable" ng-click="closeModal()">Search</button>
+      <button class="button button-block button-stable" ng-click="clearModal()">Clear Search</button>
+    </ion-content>
+  </div>
+</script>
