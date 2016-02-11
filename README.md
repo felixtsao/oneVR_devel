@@ -40,12 +40,12 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
  * Parse backend API for content distribution i.e. VR content to mobile VR viewer applications
  * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
 
-<h5> Stitching Techniques </h5>
-[Technique 1: By-Hand in After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
+<h5> Stitching Techniques</h5>
+[Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
 *Other techniques in development
 
 <h5> Web VR 360 Player </h5>
-[Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/player/index.html)
+[Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/player/index.html) <br>
 Source code located in `/player`
 
 <h4> Exhibit: An Extended Mobile Application Prototype </h4>
