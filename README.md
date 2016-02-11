@@ -10,7 +10,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching development <br>
 `/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference <br>
-`/player` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
+`/viewer` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js` or rename video to `/video/src.mp4`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
 
 <h3> Hardware/Software </h3>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose.
