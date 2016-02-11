@@ -63,6 +63,7 @@ if (mobile){ // Use Gyro-sensor for mobile phones
 	controls.connect();
 	controls.update();
 	var enable_vr = confirm('Enable VR Headset Mode?'); // Ask user
+	element.addEventListener('click', fullscreen, true);
 } else { // Click/drag controls for desktop/laptop
 	controls = new THREE.OrbitControls(camera, element);
 	controls.target.set(
@@ -188,5 +189,18 @@ function render(dt){
 
     if (enable_vr){
 		stereo.render(scene, camera);
+	}
+}
+
+// Mobile Device Fullscreen
+function fullscreen() {
+	if (container.requestFullscreen) {
+		container.requestFullscreen();
+	} else if (container.msRequestFullscreen) {
+		container.msRequestFullscreen();
+	} else if (container.mozRequestFullScreen) {
+		container.mozRequestFullScreen();
+	} else if (container.webkitRequestFullscreen) {
+		container.webkitRequestFullscreen();
 	}
 }
