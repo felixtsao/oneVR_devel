@@ -7,9 +7,10 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 
 <h3> Directories </h3>
 
-`/cam` - 3D printable model files (`.stl`), generator files (`.scad`) and camera control commands organized by camera model <br>
+`/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching development <br>
-`/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference
+`/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference <br>
+`/player` - Basic Javascript/WebGL web browser player, specify video/image source in `viewer.js`, then launch `index.html in browser
 
 <h3> Hardware/Software </h3>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose.
