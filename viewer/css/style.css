@@ -1,0 +1,48 @@
+body {margin: 0; overflow:hidden;}
+canvas {width: 100%; height: 100% }
+
+/* Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#000000; /* change if the mask should have another color then white */
+	z-index:100; /* makes sure it stays on top */
+}
+
+#status {
+	width:64px;
+	height:64px;
+	position:fixed;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background:
+	url(../img/loader.gif) no-repeat center fixed;
+	background-size: 64px; /* path to your loading animation */
+	margin:-32px 0 0 -32px; /* is width and height divided by two */
+}
+
+/* Popup box to let users know tap for fullscreen */
+#tips {
+    width:256px;
+    height:64px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 64px;
+    font-family: sans-serif;
+    font-size: 24px;
+    position: fixed;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    );
+    border-radius: 8px;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    margin:-32px 0 0 -128px;
+    z-index:99;
+}
