@@ -49,7 +49,7 @@ Still in development, check back soon!
 <h5> Web VR 360 Player </h5>
 Located in `/player`, view demo by visiting [this link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/player/index.html) on a desktop or smartphone web browser.
 
-<h5> Extended Prototype Mobile Application </h5>
+<h5> Exhibit: An Extended Mobile Application Prototype </h5>
 <img src="http://exhibit.felixtsao.com/promo.jpg" alt="Exhibit" width="820px"/>
 
 <h5> Mobile application description </h5>
