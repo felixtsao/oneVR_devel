@@ -47,9 +47,10 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 Still in development, check back soon!
 
 <h5> Web VR 360 Player </h5>
-Located in `/player`, view demo by visiting [this link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/player/index.html) on a desktop or smartphone web browser.
+[Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/player/index.html)
+Source code located in `/player`
 
-<h5> Exhibit: An Extended Mobile Application Prototype </h5>
+<h4> Exhibit: An Extended Mobile Application Prototype </h4>
 <img src="http://exhibit.felixtsao.com/promo.jpg" alt="Exhibit" width="820px"/>
 
 <h5> Mobile application description </h5>
