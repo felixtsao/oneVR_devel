@@ -9,7 +9,6 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 
 `/cam` - 3D printable model files (`.stl`), generator files (`.scad`) and camera control commands organized by camera model <br>
 `/cpp` - Automated video stitching development <br>
-`/ionic` - Cross-platform web VR viewer application built using the Ionic Framework <br>
 `/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference
 
 <h3> Hardware/Software </h3>
@@ -52,12 +51,7 @@ Still in development, check back soon!
 Exhibit is a hybrid, cross-platform mobile application that explores the new and exciting virtual reality experience of viewing homes, apartments and new properties. With a few swipes, users can navigate an intuitive search feature and instantly find themselves standing in the room they want to see via photosphere or videosphere. Users can look around as if they're actually at the property which is made possible through the sophisticated use of gyroscopic sensors and projective geometry. For sellers, adding or modifying listings happens instantly and easily through a Parse database. From home owners to budding and mature businesses, Exhibit aims to bring the best places, to the best people, in the best way. Made with some cool friends.
 
 <h5> To preview the app </h5>
- 1. Install Ionic View on your iOS or Android mobile phone
- 2. Login with user "demo@felixtsao.com" and password "demo"
- 3. Tap Exhibit and download files
- 4. Tap view and find a listing that interests you
- 5. Tap the listing and put your phone into a [cardboard viewer](https://www.google.com/get/cardboard/).
- 6. Enjoy your VR experience!
+Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com)
 <p>
 
 <h3> 3D Printing </h3>
