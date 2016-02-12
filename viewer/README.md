@@ -5,7 +5,7 @@ Basic JavaScript/WebGL 360 video/photo viewer for web browsers. Works best on Ch
 [Example](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/)
 
 <h3> Brief Usage </h3>
-Specify desired video/photo in file `/js/viewer/js` or rename video/photo file as `/video/src.mp4` or `/img/src.jpg`
+Specify desired video/photo in file `/js/viewer.js` or rename video/photo file as `/video/src.mp4` or `/img/src.jpg`
 <p>
 Player default is on video mode, to view photo, set `var play_video = false;` in the file `/js/viewer.js`
 <p>
