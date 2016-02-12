@@ -4,9 +4,9 @@
  */
 
 
-//////////////////////////////
-// VARIABLES AND FILE PATHS //
-/////////////////////////////
+//////////////
+// SETTINGS //
+//////////////
 
 var scene,
     clock,
@@ -24,10 +24,17 @@ var scene,
     pseudo3d,
     mobile;
 
-var video_path = 'video/src.mp4'; // Choose video source here
-var image_path = 'img/src.jpg'; // Choose image source here
-var projection = 'equirectangular'; // Choose a projection from those available in the switch
-var play_video = true; // Set media type: video or photo
+// Choose video source here
+var video_path = 'video/src.mp4';
+
+// Choose image source here
+var image_path = 'img/src.jpg';
+
+// Choose a projection from those available in the switch
+var projection = 'equirectangular';
+
+// Set media type: video or photo
+var play_video = true;
 
 // LAUNCH WEB APP //
 ////////////////////
@@ -79,32 +86,31 @@ function main(){
     // Auto-detect if mobile device or desktop/laptop
     mobile = isMobile.any();
     // ...or lock device type and comment-out above line
-    // var mobile = true;
+    // mobile = true;
 
     // Setup user-interaction controls by detected/set device type
     if (mobile){ // Use Gyro-sensor for mobile phones
-        camera = init_camera();
-    	controls = new THREE.DeviceOrientationControls(camera, true);
-    	controls.connect();
-    	controls.update();
-    	vr = confirm('Enable VR Headset Mode?'); // Ask user
-    	element.addEventListener('click', fullscreen, true);
+        vr = confirm('Enable VR Headset Mode?'); // Ask user
+        camera = init_camera(vr);
+        controls = new THREE.DeviceOrientationControls(camera, true);
+        controls.connect();
+        controls.update();
+        element.addEventListener('click', fullscreen, true);
+        element.addEventListener('click', start_video, true);
     } else { // Click/drag controls for desktop/laptop
         camera = init_camera();
-    	controls = new THREE.OrbitControls(camera, element);
-    	controls.target.set(
-    		camera.position.x - 0.0001, // BUG: No idea why an offset is needed for click/drag to work
-    		camera.position.y,
-    		camera.position.z
-    	);
-    	controls.noPan = true;
-    	controls.noZoom = true;
+        controls = new THREE.OrbitControls(camera, element);
+        controls.target.set(
+            camera.position.x - 0.0001, // BUG: No idea why an offset is needed for click/drag to work
+            camera.position.y,
+            camera.position.z
+        );
+    controls.noPan = true;
+    controls.noZoom = true;
     }
 
     // Pseudo-stereo3D mode for monoscopic image/video source
-    if (vr){
-    	pseudo3d = new THREE.StereoEffect(renderer);
-    }
+    if(vr) pseudo3d = new THREE.StereoEffect(renderer);
 
 
     ///////////////////////
@@ -113,7 +119,7 @@ function main(){
 
     switch(projection){
     	case 'equirectangular':
-    		geometry = new THREE.SphereGeometry(500, 60, 40);
+    		geometry = new THREE.SphereGeometry(256, 64, 32);
             geometry.scale(-1, 1, 1); // Flip since viewing from inside of sphere
     		break;
     	case 'cube':
@@ -156,8 +162,8 @@ function resize() {
 	camera.updateProjectionMatrix();
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	if (vr){
-		pseudo3d.setSize(window.innerWidth, window.innerHeight);
-	}
+        pseudo3d.setSize(window.innerWidth, window.innerHeight);
+    }
 }
 
 
@@ -170,14 +176,23 @@ function update(dt) {
 
 function render(dt){
 	renderer.render(scene, camera);
+    if(play_video){
+        texture.needsUpdate = true;
+    }
     if (vr){
 		pseudo3d.render(scene, camera);
 	}
 }
 
 
-function init_camera(){
-    var new_camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+function init_camera(vr){
+    var fov;
+    if(vr){
+        fov = 90;
+    } else {
+        fov = 70;
+    }
+    var new_camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 1, 1100);
     new_camera.position.set(0, 0, 0);
     new_camera.target = new THREE.Vector3(0, 0, 0);
     scene.add(new_camera);
@@ -195,25 +210,27 @@ function init_photo_screen(){
 
 
 function init_video_screen(){
-    video = document.createElement('video');
-    video.src = video_path;
+        video = document.createElement('video');
+        video.src = video_path;
 
-    video.load();
-    video.loop = true;
-    video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+        video.load();
+        video.loop = true;
+        video.setAttribute('webkit-playsinline', 'webkit-playsinline');
 
-    var texture = new THREE.VideoTexture(video);
-    texture.minFilter = THREE.LinearFilter;
-    texture.format = THREE.RGBFormat;
-    texture.generateMipmaps = false;
+        texture = new THREE.VideoTexture(video);
+        texture.minFilter = THREE.LinearFilter;
+        texture.format = THREE.RGBFormat;
+        texture.generateMipmaps = false;
 
-    var material = new THREE.MeshBasicMaterial({map: texture});
-    var screen = new THREE.Mesh(geometry, material);
-    screen.position.set(0,0,0);
-    scene.add(screen);
-    video.play();
+        var material = new THREE.MeshBasicMaterial({map: texture});
+        var screen = new THREE.Mesh(geometry, material);
+        screen.position.set(0,0,0);
+        scene.add(screen);
 }
 
+function start_video(){
+    video.play();
+}
 
 // Mobile Device Fullscreen
 function fullscreen(){
