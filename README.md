@@ -9,7 +9,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching development <br>
-`/mlab` - Proprietary MATLAB code for a basic panorama stitching algorithm from a class, for learning and reference <br>
+`/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
 `/viewer` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js` or rename video to `/video/src.mp4`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
 
 <h3> Hardware/Software </h3>
@@ -62,7 +62,7 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on a Rostock Max V2 as the mount is relatively large for that printer's heatbed and would begin curling at the edges from non-uniform heating or something.
 
 <h5> Creating a new camera mount </h5>
-Files are located in `/cad` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
+Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
 <img src="/cam/sj4000/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
 <img src="/cam/sj4000/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
