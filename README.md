@@ -22,8 +22,8 @@ Listed below are items I have tested but any of them can be swapped out with oth
  * Standard computer, relatively powerful GPU for image processing preferred
 <p>
 <center>
-<img src="cam/sj4000/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
-<img src="cam/sj4000/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
+<img src="cam/sj4000_elecam/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
+<img src="cam/sj4000_elecam/img_ref/sj4000_6x_02.jpg" alt="VRCAM" width="400px"/>
 </center>
 
 <h5> About the multi-camera system </h5>
@@ -64,8 +64,8 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 <h5> Creating a new camera mount </h5>
 Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
-<img src="/cam/sj4000/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
-<img src="/cam/sj4000/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
+<img src="/cam/sj4000_elecam/img_ref/sj4000_6x_03.jpg" alt="SJ4000s" width="420px"/>
+<img src="/cam/sj4000_elecam/img_ref/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 
 <h3> // TODO </h3>
  * Automate video stitching process using OpenCV, C++<br>
