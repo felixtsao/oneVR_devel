@@ -18,7 +18,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose.
 
 <h5> Hardware list </h5>
- * 6x SJ4000 action cameras
+ * 6x SJ4000 action cameras ~$500
  * 3D printable circular camera mount
  * Standard Tripod
  * Standard computer, relatively powerful GPU for image processing preferred
@@ -33,7 +33,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 <p>
  6 SJ4000 cameras arranged like the picture below is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching.
 <p>
-[4K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
+[2K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
 
 <h5> Software list </h5>
  * OpenSCAD for rapid, parameterized prototyping of 3D printable VR camera mounts
