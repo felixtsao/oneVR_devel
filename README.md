@@ -5,7 +5,7 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 
-<img src="cam/pl.jpg" alt="Pipeline" width="400px"/>
+<img src="cam/pl.jpg" alt="Pipeline" width="900px"/>
 
 <h3> Directories </h3>
 
