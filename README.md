@@ -5,6 +5,8 @@ A virtual reality camera system along with a cross-platform (iOS & Android) mobi
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 
+<img src="cam/pipeline.jpg" alt="Pipeline" width="400px"/>
+
 <h3> Directories </h3>
 
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
@@ -58,6 +60,8 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 <p>
 
 <h3> 3D Printing </h3>
+
+Print camera mount yourself or find a local printer through [3DHubs](https://www.3dhubs.com)
 
 `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Messed up twice 1/4 of the way in on a Rostock Max V2 as the mount is relatively large for that printer's heatbed and would begin curling at the edges from non-uniform heating or something.
 
