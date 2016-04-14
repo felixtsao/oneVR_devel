@@ -37,11 +37,10 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 [2K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
 
 <h5> Software list </h5>
- * OpenSCAD for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
- * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile VR viewer (Free)
- * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video (Free 30 Day Trial, then monthly subscription)
- * Blender for an alternative stitching method to After Effects which also includes capabilites to composite text and 3D models. (Free)
- * OpenCV and C++ programming for determining translations and relative positioning between video streams (Free)
+ * [OpenSCAD](http://www.openscad.org) for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
+ * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for rendering out all blended video streams as a large, cohesive rectangular .mp4 video (Free 30 Day Trial, then monthly subscription)
+ * [Blender](https://www.blender.org/) for an alternative stitching method to After Effects which also includes capabilites to composite text and 3D models. (Free)
+ * [OpenCV](http://opencv.org/) and C++ programming for determining translations and relative positioning between video streams (Free)
 
 <h5> Stitching Techniques</h5>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
