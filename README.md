@@ -39,6 +39,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 <h5> Software list </h5>
  * [OpenSCAD](http://www.openscad.org) for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
  * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free 30-day trial, then monthly subscription)
+ * (Optional) Stitching plugins for After Effects like [Skybox Mettle](http://www.mettle.com/product/skybox/) for professional stitching results ($99)
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
  * [OpenCV](http://opencv.org/) and C++ programming for determining translations and relative positioning between video streams (Free)
 
