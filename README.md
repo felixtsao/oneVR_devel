@@ -1,7 +1,7 @@
 # One VR
 <h3> A low-cost, end-to-end VR solution concept </h3>
 <p>
-A virtual reality camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
+A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM and NoPro.
 
@@ -10,18 +10,19 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 <h3> Directories </h3>
 
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
-`/cpp` - Automated video stitching development <br>
+`/cpp` - Automated video stitching (in development / incomplete) <br>
 `/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
 `/viewer` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js` or rename video to `/video/src.mp4`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
 
-<h3> Hardware/Software </h3>
+<h3> Bill of Materials - Hardware/Software </h3>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose.
 
 <h5> Hardware list </h5>
- * 6x SJ4000 action cameras ~$500
- * 3D printable circular camera mount
+ * 6 or more SJ4000 action cameras (~$85 each), Alternative cameras include GoPro, Xiaomi (may require modifying 3D models)
+ * 3D printable circular camera mount (Cost varies on accessibility to 3D printer, find a local center at 3dhubs.com)
  * Standard Tripod
  * Standard computer, relatively powerful GPU for image processing preferred
+ * (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording
 <p>
 <center>
 <img src="cam/sj4000_elecam/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
@@ -29,21 +30,22 @@ Listed below are items I have tested but any of them can be swapped out with oth
 </center>
 
 <h5> About the multi-camera system </h5>
-Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
+Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video. Top lid for camera mount not pictured.
 <p>
- 6 SJ4000 cameras arranged like the picture below is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching.
+ 6 SJ4000 cameras arranged like the picture below is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution.
 <p>
 [2K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
 
 <h5> Software list </h5>
- * OpenSCAD for rapid, parameterized prototyping of 3D printable VR camera mounts
- * OpenCV and C++ programming for determining translations and relative positioning between video streams
- * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile VR viewer
- * Parse backend API for content distribution i.e. VR content to mobile VR viewer applications
- * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video
+ * OpenSCAD for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
+ * Ionic Mobile Application Framework for rapid prototyping of a cross-platform 360 photo/video mobile VR viewer (Free)
+ * After Effects and Media Encoder for rendering out all blended video streams as a large, cohesive rectangular .mp4 video (Free 30 Day Trial, then monthly subscription)
+ * Blender for an alternative stitching method to After Effects which also includes capabilites to composite text and 3D models. (Free)
+ * OpenCV and C++ programming for determining translations and relative positioning between video streams (Free)
 
 <h5> Stitching Techniques</h5>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
+Blender Method coming soon <br>
 *Other techniques in development
 
 <h5> Web VR 360 Player </h5>
@@ -73,6 +75,8 @@ Files are located in `/cam` directory, organized by camera model. To create a ne
 
 <h3> // TODO </h3>
  * Automate video stitching process using OpenCV, C++<br>
- * <strike>Make video tutorial for hand-stitching 360 videos</strike>
+ * Create stitching template and tutorial for using Blender <br>
+ * Document gen-lock trigger hardware
+ * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
 <h4>Bugs:</h4>
 `Report bugs here`
