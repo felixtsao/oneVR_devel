@@ -18,11 +18,11 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose.
 
 <h5> Hardware list </h5>
- * 6 or more SJ4000 action cameras (~$85 each), Alternative cameras include GoPro, Xiaomi (may require modifying 3D models)
+ * 6 or more SJ4000 action cameras (~$85 each), Alternatives include GoPro, Xiaomi (may need to modify 3D models)
  * 3D printable circular camera mount (Cost varies on accessibility to 3D printer, find a local center at 3dhubs.com)
  * Standard Tripod
  * Standard computer, relatively powerful GPU for image processing preferred
- * (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording
+ * (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording, requires soldering (<$20)
 <p>
 <center>
 <img src="cam/sj4000_elecam/img_ref/sj4000_6x_01.jpg" alt="VRCAM" width="400px"/>
