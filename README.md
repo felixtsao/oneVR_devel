@@ -7,6 +7,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 <p>
 Project started from a Computational Photography class (CS 534) and funding for hardware by Garage Physics at University of Wisconsin, Madison.
 
+<h3> Pipeline </h3>
 <img src="cam/pl.jpg" alt="Pipeline" width="900px"/>
 
 <h3> Directories </h3>
