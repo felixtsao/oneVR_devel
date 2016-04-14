@@ -41,7 +41,8 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
  * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free 30-day trial, then monthly subscription)
  * (Optional) Stitching plugins for After Effects like [Skybox Mettle](http://www.mettle.com/product/skybox/) for professional stitching results ($99)
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
- * [OpenCV](http://opencv.org/) and C++ programming for determining translations and relative positioning between video streams (Free)
+ * [YouTube 360 Injector](https://support.google.com/youtube/answer/6178631?hl=en) for tagging proper metadata to final 360 video for properly uploading to YouTube (Free)
+ * (Optional)[OpenCV](http://opencv.org/) and C++ programming for determining translations and relative positioning between video streams, for developers (Free)
 
 <h5> Stitching Techniques</h5>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
