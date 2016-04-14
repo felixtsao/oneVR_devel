@@ -1,5 +1,5 @@
 # One VR
-<h3> A low-cost, end-to-end VR solution concept </h3>
+<h3> A low-cost, DIY, end-to-end 360/VR solution concept </h3>
 <p>
 A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
@@ -38,7 +38,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 
 <h5> Software list </h5>
  * [OpenSCAD](http://www.openscad.org) for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
- * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free 30 Day Trial, then monthly subscription)
+ * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free 30-day trial, then monthly subscription)
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
  * [OpenCV](http://opencv.org/) and C++ programming for determining translations and relative positioning between video streams (Free)
 
