@@ -4,6 +4,8 @@
 A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro.
+<p>
+Project started from a Computational Photography class (CS 534) and funding for hardware by Garage Physics at University of Wisconsin, Madison.
 
 <img src="cam/pl.jpg" alt="Pipeline" width="900px"/>
 
