@@ -9,6 +9,8 @@ Specify desired video/photo in file `/js/viewer.js` or rename video/photo file a
 <p>
 Player default is on video mode, to view photo, set `var play_video = false;` in the file `/js/viewer.js`
 <p>
+Player default and current implementation only supports equirectangular projection/media. File `/js/viewer.js` includes switch for selecting projection type for future expansion i.e. cubic, pyramidal etc.
+<p>
 Launch `index.html` in a web browser to play. Can be hosted online and can be viewed on mobile devices using head mounted displays like cardboard.
 
 <h3> Bugs </h3>
