@@ -14,35 +14,71 @@ difference(){
     // outer radius
     cylinder(h = 10, r = 1.36 * distance, center = true);
 
+    // camera 1 trench
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
-      
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
+    
+    // camera 2 trench
     rotate([0,0,60])
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
-
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
+    
+    // camera 3 trench
     rotate([0,0,120])
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
 
+    // camera 4 trench
     rotate([0,0,180])
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
 
+    // camera 5 trench
     rotate([0,0,240])
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
 
+    // camera 6 trench
     rotate([0,0,300])
     translate([distance, 0, lift])
-    cube(size = [length, width, depth], center = true);
+    union(){
+        cube(size = [length, width, depth], center = true);
+        translate([4.284, 0, 0])
+        cube(size = [7, 26, 14], center = true); //rocker buttons
+    }
 
     // center dip
     translate([0, 0, lift])
     cylinder(h = 8, r = 30, center = true);
 
     // clearance hole for 1/4 20 bolt
-    cylinder(h = 20, r = 3.18, center = true);
+    cylinder(h = 20, r = 3.5, center = true);
+    
+    // clearance holes for optional 10/32 top camera bolt
+    translate([20, 0, 0])
+    cylinder(h = 20, r = 2.55, center = true);
+    translate([-20, 0, 0])
+    cylinder(h = 20, r = 2.55, center = true);
 }
 
 

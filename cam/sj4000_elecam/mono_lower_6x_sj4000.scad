@@ -22,16 +22,24 @@ difference(){
     cylinder(h = 15, r = 1.36 * distance, center = true);
 
     // trench holding camera 0
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
+ 
         
     // trench holding camera 1
     rotate([0,0, angular_disp * 1]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        // bottom i/o cutout
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
@@ -39,8 +47,11 @@ difference(){
 
     // trench holding camera 2
     rotate([0,0, angular_disp * 2]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
@@ -48,8 +59,11 @@ difference(){
 
     // trench holding camera 3
     rotate([0,0, angular_disp * 3]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
@@ -57,8 +71,11 @@ difference(){
 
     // trench holding camera 4
     rotate([0,0, angular_disp * 4]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
@@ -66,8 +83,11 @@ difference(){
 
     // trench holding camera 5
     rotate([0,0, angular_disp * 5]){
-    translate([distance, 0, 3])
-    cube(size = [length, width, depth], center = true);
+    translate([distance, 0, 3]){
+        cube(size = [length, width, depth], center = true);
+        translate([-6.85, 2.9, 0])
+        cube(size = [10, 22.2, 100], center = true);
+    }
     rotate([0,90,0])
     translate([lenslift, lenset, lensdist])
     cylinder(h = 12, r = 12.5, center = true);
@@ -77,8 +97,12 @@ difference(){
     translate([0, 0, depth - 6])
     cylinder(h = 12, r = 30, center = true);
 
-    // clearance hole for 1/4 20 bolt
-    cylinder(h = 30, r = 3.18, center = true);
+    // clearance, not tap, hole for 1/4 20 bolt,
+    cylinder(h = 30, r = 3.5, center = true);
+    
+    // bottom washer, nut
+    translate([0, 0, depth - 6])
+    cylinder(h = 12, r = 30, center = true);
 
 }
 
