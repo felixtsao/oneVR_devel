@@ -24,7 +24,7 @@ difference(){
     // trench holding camera 0
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
@@ -37,7 +37,7 @@ difference(){
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
         // bottom i/o cutout
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
@@ -49,7 +49,7 @@ difference(){
     rotate([0,0, angular_disp * 2]){
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
@@ -61,7 +61,7 @@ difference(){
     rotate([0,0, angular_disp * 3]){
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
@@ -73,7 +73,7 @@ difference(){
     rotate([0,0, angular_disp * 4]){
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
@@ -85,7 +85,7 @@ difference(){
     rotate([0,0, angular_disp * 5]){
     translate([distance, 0, 3]){
         cube(size = [length, width, depth], center = true);
-        translate([-6.85, 2.9, 0])
+        translate([-5.35, 2.9, 0])
         cube(size = [10, 22.2, 100], center = true);
     }
     rotate([0,90,0])
