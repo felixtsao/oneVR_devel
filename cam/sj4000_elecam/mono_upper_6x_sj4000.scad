@@ -18,7 +18,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
     
@@ -27,7 +27,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
     
@@ -36,7 +36,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
 
@@ -45,7 +45,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
 
@@ -54,7 +54,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
 
@@ -63,7 +63,7 @@ difference(){
     translate([distance, 0, lift])
     union(){
         cube(size = [length, width, depth], center = true);
-        translate([4.284, 0, 0])
+        translate([-4.284, 0, 0])
         cube(size = [7, 26, 14], center = true); //rocker buttons
     }
 
