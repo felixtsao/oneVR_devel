@@ -15,56 +15,92 @@ difference(){
     cylinder(h = 10, r = 1.36 * distance, center = true);
 
     // camera 1 trench
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
-    
+
     // camera 2 trench
     rotate([0,0,60])
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+        
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
     
     // camera 3 trench
     rotate([0,0,120])
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+        
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
 
     // camera 4 trench
     rotate([0,0,180])
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+        
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
 
     // camera 5 trench
     rotate([0,0,240])
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+    
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
 
     // camera 6 trench
     rotate([0,0,300])
-    translate([distance, 0, lift])
-    union(){
-        cube(size = [length, width, depth], center = true);
-        translate([-4.284, 0, 0])
-        cube(size = [7, 26, 14], center = true); //rocker buttons
+    translate([distance, 0, lift]){
+        union(){
+            cube(size = [length, width, depth], center = true);
+            translate([-4.284, 0, 0])
+            cube(size = [7, 26, 12], center = true); //rocker buttons
+        }
+        
+        // directional microphone cutout
+        rotate([0,90,0])
+        translate([3,0,11])
+        cylinder(h = 15, r = 2.5, center = true);
     }
 
     // center dip
