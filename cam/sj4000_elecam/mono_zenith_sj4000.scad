@@ -10,7 +10,7 @@ union(){
         
     // 6-32 screw hole well
     translate([-20, 0, 8.25])
-    cylinder(h = 16.5, r = 5, center = true);
+    cylinder(h = 16.5, r = 5.1, center = true);
     
     // velcro slot 1
     translate([-26, -28.9, 0])
