@@ -25,7 +25,7 @@ union(){
 
 // sj4000
 translate([-15.24,-43.9,12.5])
-cube(size = [41,60,24.7], center = false);
+cube(size = [41.5,60,24.7], center = false);
 
 // io, rocker cutout    
 translate([-10.24,-50,12.5])
@@ -36,9 +36,9 @@ cylinder(h = 20, r = 9, center = true);
     
 // 6-32 clearance for mounting screws onto upper lid
 translate([20, 0, 0])
-cylinder(h = 100, r = 1.83, center = true);
+cylinder(h = 100, r = 1.90, center = true);
 translate([-20, 0, 0])
-cylinder(h = 100, r = 1.83, center = true);
+cylinder(h = 100, r = 1.90, center = true);
 
 // 6-32 counter-sink
 translate([20, 0, 11])

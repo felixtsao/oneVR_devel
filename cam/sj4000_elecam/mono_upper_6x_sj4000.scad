@@ -112,9 +112,9 @@ difference(){
     
     // clearance holes for optional 10/32 top camera bolt
     translate([20, 0, 0])
-    cylinder(h = 20, r = 1.83, center = true);
+    cylinder(h = 20, r = 1.90, center = true);
     translate([-20, 0, 0])
-    cylinder(h = 20, r = 1.83, center = true);
+    cylinder(h = 20, r = 1.90, center = true);
 }
 
 
