@@ -63,7 +63,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 <p>
 <i>h4 - h6 only applies if using top camera module</i>
 <br>
-<b> h4 </b> - 2x 6-32 screws to mount top camera expansion module.
+<b> h4 </b> - 2x 6-32 screws (> 1.5" length) to mount top camera expansion module.
 <br>
 <b> h5 </b> - 4x #6 washers.
 <br>
@@ -100,7 +100,7 @@ Visit `/viewer` directory for usage and source code.
 
 Print camera mount yourself or find a local printer through [3DHubs](https://www.3dhubs.com) or the local library.
 
-Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design on right.
+Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design on right with a layer height of 0.27mm on a a 0.4mm extruder nozzle.
 
 <img src="/doc/img/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 <img src="/doc/img/sj4000_6x_v3_prusai3.jpg" alt="Prusa i3" width="420px"/>
