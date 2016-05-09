@@ -28,7 +28,7 @@ Project started from a Computational Photography class (CS 534) and funding for 
 
 Version 2 left, pictured without upper mount. Version 3 on right with optional top camera expansion module.
 
-Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
+Captures monoscopic video in 360 degrees horizontal and ~135 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
 6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution.
 <p>
@@ -39,7 +39,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 <h5> Hardware </h5>
 <img src="doc/img/bom.jpg" alt="Bill of Materials" width="900px"/>
-<b>a.</b> 6 or more SJ4000 action cameras (~$85 each), Alternatives include GoPro, Xiaomi (may need to modify 3D models). Can use less cameras by replacing stock lenses with wide angle lenses for Xiaomi and SJ4000.
+<b>a.</b> 6 or more SJ4000 action cameras (~$60 each), Alternatives include GoPro, Xiaomi (may need to modify 3D models). Can use less cameras by replacing stock lenses with wide angle lenses for Xiaomi and SJ4000.
 <br>
 <b> b. </b> A lower apparatus with to seat cameras. Modify existing CAD designs in `/cam` directory to meet camera choice.
 <br>
