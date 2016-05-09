@@ -51,22 +51,27 @@ Listed below are items I have tested but any of them can be swapped out with oth
 <br>
 <b> f. </b> Standard computer, relatively powerful GPU for image processing preferred
 <br>
+<b> g. </b> Any mobile device with a modern web browser
+<br>
+<b> h. </b> A headmounted display to house mobile device for VR viewing like [Cardboard](https://www.google.com/get/cardboard/) or print one from [Thingiverse](http://www.thingiverse.com/search?q=vr+headset).
 <p>
 <b> h1 </b> - 1x 1/4"-20 bolt for securing top mount to bottom mount. For SJ4000s, length of bolt must be > 3". May be different for other camera selections. Ideally, choose a length that allows bolt to stick past bottom mount an inch or two to connect to tripod with coupling bolt 'h7.'
 <br>
 <b> h2 </b> - 2x Washers for 1/4"-20 bolt.
 <br>
 <b> h3 </b> - 1x 1/4"-20 nut for tightening under bottom mount.
-<br>
-<b> h7 </b> - 1x 1/4"-20 coupling nut for joining entire setup to tripod head.
 <p>
-<h5> If using top camera module: </h5>
+<i>h4 - h6 only applies if using top camera module</i>
+<br>
 <b> h4 </b> - 2x 6-32 screws to mount top camera expansion module.
 <br>
 <b> h5 </b> - 4x #6 washers.
 <br>
 <b> h6 </b> - 2x 6-32 nuts.
 <p>
+<b> h7 </b> - 1x 1/4"-20 coupling nut for joining entire setup to tripod head.
+<p>
+
 (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording, requires soldering
 <center>
 <img src="doc/img/genlock_switch.jpg" alt="Genlock Switch" width="420px"/>
