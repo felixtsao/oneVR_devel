@@ -24,7 +24,7 @@ union(){
 }
 
 // sj4000
-translate([-15.24,-43.9,12.5])
+translate([-15.49,-43.9,12.5])
 cube(size = [41.5,60,24.7], center = false);
 
 // io, rocker cutout    
