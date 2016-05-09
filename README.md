@@ -26,7 +26,7 @@ Project started from a Computational Photography class (CS 534) and funding for 
 <img src="doc/img/sj4000_6x_v3_01.jpg" alt="Version 3" width="420px"/>
 </center>
 
-Version 2 left, version 3 on right with optional top camera expansion module.
+Version 2 left, pictured without upper mount. Version 3 on right with optional top camera expansion module.
 
 Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
@@ -35,7 +35,7 @@ Captures monoscopic video in 360 degrees horizontal and ~170 degrees vertical. S
 [2K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
 
 <h3> Bill of Materials - Hardware & Software </h3>
-Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Search [3DHubs](https://www.3dhubs.com) to find access to a nearby 3D printer. Some libraries have printers as well. Or build your own [RepRap](http://www.reprap.org).
+Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Search [3DHubs](https://www.3dhubs.com) to find access to a nearby 3D printer. Some libraries have printers as well. Or build your own [RepRap](http://www.reprap.org) as a support project.
 
 <h5> Hardware </h5>
 <img src="doc/img/bom.jpg" alt="Bill of Materials" width="900px"/>
@@ -100,13 +100,13 @@ Visit `/viewer` directory for usage and source code.
 
 Print camera mount yourself or find a local printer through [3DHubs](https://www.3dhubs.com) or the local library.
 
-Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design on right with a layer height of 0.27mm on a a 0.4mm extruder nozzle.
+Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design, right, with a layer height of 0.27mm through a 0.4mm extruder nozzle.
 
 <img src="/doc/img/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 <img src="/doc/img/sj4000_6x_v3_prusai3.jpg" alt="Prusa i3" width="420px"/>
 
 <h5> Creating a new camera mount </h5>
-Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
+Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to millimeter for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
 <h4> Exhibit: An Extended Mobile Application Prototype </h4>
 <img src="http://exhibit.felixtsao.com/promo.jpg" alt="Exhibit" width="820px"/>
