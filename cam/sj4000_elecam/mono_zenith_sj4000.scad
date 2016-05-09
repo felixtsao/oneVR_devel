@@ -36,9 +36,9 @@ cylinder(h = 20, r = 9, center = true);
     
 // 6-32 clearance for mounting screws onto upper lid
 translate([20, 0, 0])
-cylinder(h = 100, r = 1.90, center = true);
+cylinder(h = 100, r = 2, center = true);
 translate([-20, 0, 0])
-cylinder(h = 100, r = 1.90, center = true);
+cylinder(h = 100, r = 2, center = true);
 
 // 6-32 counter-sink
 translate([20, 0, 11])
