@@ -58,15 +58,15 @@ Listed below are items I have tested but any of them can be swapped out with oth
 <br>
 <b> h3 </b> - 1x 1/4"-20 nut for tightening under bottom mount.
 <br>
-<b> h4 </b> - (Optional) 2x 6-32 screws to mount top camera expansion module.
+<b> h7 </b> - 1x 1/4"-20 coupling nut for joining entire setup to tripod head.
+<p>
+<h5> If using top camera module: </h5>
+<b> h4 </b> - 2x 6-32 screws to mount top camera expansion module.
 <br>
 <b> h5 </b> - 4x #6 washers.
 <br>
 <b> h6 </b> - 2x 6-32 nuts.
-<br>
-<b> h7 </b> - 1x 1/4"-20 coupling nut for joining entire setup to tripod head.
-
-
+<p>
 (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording, requires soldering
 <center>
 <img src="doc/img/genlock_switch.jpg" alt="Genlock Switch" width="420px"/>
@@ -81,13 +81,15 @@ Listed below are items I have tested but any of them can be swapped out with oth
  * [YouTube 360 Injector](https://support.google.com/youtube/answer/6178631?hl=en) for tagging proper metadata to final 360 video for properly uploading to YouTube (Free)
  * (Optional) [OpenCV](http://opencv.org/) for determining relative positioning between video streams, for developing `/cpp` (Free)
 
-<h5> Stitching Techniques</h5>
+<h3> Stitching Techniques</h3>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
 Blender Method coming soon <br>
 *Other techniques in development
 
-<h5> Web VR 360 Player </h5>
-[Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/index.html) - Source code located in `/viewer`
+<h3> Viewing </h3>
+Web VR 360 Player - [Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/index.html)
+<p>
+Visit `/viewer` directory for usage and source code.
 
 <h3> 3D Printing </h3>
 
@@ -95,11 +97,11 @@ Print camera mount yourself or find a local printer through [3DHubs](https://www
 
 Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design on right.
 
-<h5> Creating a new camera mount </h5>
-Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
-
 <img src="/doc/img/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
 <img src="/doc/img/sj4000_6x_v3_prusai3.jpg" alt="Prusa i3" width="420px"/>
+
+<h5> Creating a new camera mount </h5>
+Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to `mm` for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
 <h4> Exhibit: An Extended Mobile Application Prototype </h4>
 <img src="http://exhibit.felixtsao.com/promo.jpg" alt="Exhibit" width="820px"/>
