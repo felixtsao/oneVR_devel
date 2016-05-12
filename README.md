@@ -30,9 +30,9 @@ Version 2 left, pictured without upper mount. Version 3 on right with optional t
 
 Captures monoscopic video in 360 degrees horizontal and ~135 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
-6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 6 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution.
+6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 5 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution. If planning to build with SJ4000s oriented vertically, using 7 cameras is probably a safer option.
 <p>
-[2K Demo Footage](https://www.youtube.com/watch?v=lM7lKqry0ZM)
+[4K Demo Footage](https://www.youtube.com/watch?v=ICYaRKxAT5M)
 
 <h3> Bill of Materials - Hardware & Software </h3>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Search [3DHubs](https://www.3dhubs.com) to find access to a nearby 3D printer. Some libraries have printers as well. Or build your own [RepRap](http://www.reprap.org) as a support project.
