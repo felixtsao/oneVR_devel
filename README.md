@@ -41,11 +41,11 @@ Listed below are items I have tested but any of them can be swapped out with oth
 <img src="doc/img/bom.jpg" alt="Bill of Materials" width="900px"/>
 <b>a.</b> 6 or more SJ4000 action cameras (~$60 each), Alternatives include GoPro, Xiaomi (may need to modify 3D models). Can use less cameras by replacing stock lenses with wide angle lenses for Xiaomi and SJ4000.
 <br>
-<b> b. </b> A lower apparatus with to seat cameras. Modify existing CAD designs in `/cam` directory to meet camera choice.
+<b> b. </b> A lower bracket/apparatus to seat cameras. Modify existing CAD designs in `/cam` directory to meet camera choice.
 <br>
 <b> c. </b> A matching upper apparatus to secure cameras. Likewise, modify existing CAD designs in `/cam` directory to meet camera choice.
 <br>
-<b> d. </b> (Optional) Zenith module for housing a single additional camera i.e. "Sky Camera."
+<b> d. </b> (Optional) Zenith module for housing a single additional zenith camera i.e. "Sky Camera."
 <br>
 <b> e. </b> Standard Tripod
 <br>
