@@ -6,7 +6,7 @@ A virtual reality, 360 camera system along with a cross-platform (iOS & Android)
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro.
 <p>
-Project started from a Computational Photography class (CS 534) and funding for hardware by Garage Physics at University of Wisconsin, Madison.
+Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 
 <h3> Pipeline </h3>
 <img src="doc/img/pl.jpg" alt="Pipeline" width="900px"/>
