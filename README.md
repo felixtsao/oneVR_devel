@@ -119,7 +119,7 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 <p>
 
 <h3> // TODO </h3>
- * Automate video stitching process using OpenCV, C++<br>
+ * Create automated video stitching template using OpenCV, C++<br>
  * Create stitching template and tutorial for using Blender <br>
  * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
 <h4>Bugs:</h4>
