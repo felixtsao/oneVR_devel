@@ -29,4 +29,6 @@ Currently works with images, will need to extend to video using `ffmpeg` or some
 <br>
 Need to implement polar wraparound
 <br>
+Code for parallel hardware, GPU
+<br>
 3D?
