@@ -2,7 +2,7 @@
 
 <img src="panorama.jpg" alt="Banner" width="900px"/>
 
-A simple panorama stitcher. Assumes input images are taken from radially symmetric viewpoints relative to common optical center. Uses OpenCV feature description to generate matching landmarks between adjacent images. Requires OpenCV to be installed. Works with OpenCV 3.1.0 installed on Ubuntu 16.04
+A simple panorama stitcher. Assumes input images are taken from radially symmetric viewpoints relative to common optical center--like the camera shown on the main page and like the Google Jump camera. Uses OpenCV feature description to generate matching landmarks between adjacent images. Requires OpenCV to be installed in order to compile. Works with OpenCV 3.1.0 installed on Ubuntu 16.04
 
 <h3> Brief Usage (Ubuntu 16.04, OpenCV 3.1.0)</h3>
 <i> You can probably massage this to run in Windows and macOS since using `cmake`, I haven't tried yet.</i>
@@ -20,13 +20,13 @@ After compilation, still in same directory, to stitch images, run:
 ./radStitch <image1> <image2> ... <imageN>
 ```
 <p>
-Current constraints:
+<i>Current constraints:</i>
 <br>
 Neighboring images specified in command line need to have an overlapping region i.e. `<imageK>` and `<imageK+1>` must share an overlapping region
 
 <h3> // TODO </h3>
 Currently works with images, will need to extend to video using `ffmpeg` or something
 <br>
-Need to implement 360 wraparound and polar wraparound
+Need to implement polar wraparound
 <br>
 3D?
