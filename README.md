@@ -88,8 +88,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 <h3> Stitching Techniques</h3>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
-Blender Method coming soon <br>
-*Other techniques in development
+Compile and run OpenCV stitcher in `\cpp` (Currently only works for image sequences)
 
 <h3> Viewing </h3>
 Web VR 360 Player - [Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/index.html)
@@ -122,5 +121,3 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
  * Create automated video stitching template using OpenCV, C++<br>
  * Create stitching template and tutorial for using Blender <br>
  * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
-<h4>Bugs:</h4>
-`Report bugs here`
