@@ -20,7 +20,7 @@ After compilation, still in same directory, to stitch images, run:
 <p>
 Current constraints:
 <br>
-Neighboring images specified in command line need to have an overlapping region i.e. <imageK> and <imageK+1> must share an overlapping region
+Neighboring images specified in command line need to have an overlapping region i.e. `<imageK>` and `<imageK+1>` must share an overlapping region
 
 <h3> // TODO </h3>
 Currently works with images, will need to extend to video using `ffmpeg` or something
