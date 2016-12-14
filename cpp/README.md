@@ -1,5 +1,7 @@
 # Radial Stitcher (radStitch)
 
+<img src="panorama.jpg" alt="Banner" width="900px"/>
+
 A simple panorama stitcher. Assumes input images are taken from radially symmetric viewpoints relative to common optical center. Uses OpenCV feature description to generate matching landmarks between adjacent images. Requires OpenCV to be installed. Works with OpenCV 3.1.0 installed on Ubuntu 16.04
 
 <h3> Brief Usage </h3>
@@ -16,7 +18,7 @@ Current constraints:
 <br>
 Neighboring images specified in command line need to have an overlapping region i.e. <imageK> and <imageK+1> must share an overlapping region
 
-<h3> `// TODO` </h3>
+<h3> // TODO </h3>
 Currently works with images, will need to extend to video using `ffmpeg` or something
 <br>
 Need to implement 360 wraparound and polar wraparound
