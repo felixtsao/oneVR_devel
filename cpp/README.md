@@ -7,9 +7,13 @@ A simple panorama stitcher. Assumes input images are taken from radially symmetr
 <h3> Brief Usage </h3>
 To compile, make sure OpenCV is installed, and with a terminal, navigate to directory with `main.cpp` and `CMakeLists.txt` run:
 ```
+cmake .
+```
+Staying in the same directory, run:
+```
 make
 ```
-After compilation, to stitch image, in terminal run:
+After compilation, still in same directory, to stitch images, run:
 ```
 ./radStitch <image1> <image2> ... <imageN>
 ```
