@@ -17,7 +17,7 @@ Project started Spring break 2015 with some good friends and further developed t
 `/cpp` - Automated video stitching (in development, see video tutorial below for manual solution) <br>
 `/doc` - Documentation and reference images <br>
 `/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
-`/viewer` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js` or rename video to `/video/src.mp4`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
+`/viewer` - Basic VR 360 video/image player for web browsers
 
 <h3> Multi-camera system overview </h3>
 
