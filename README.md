@@ -128,3 +128,5 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 2) [Text: Chapter 9, Computer Vision, Szeliski](http://szeliski.org/Book/) <br>
 3) [Paper: ORB Feature Descriptor, Rublee](http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf) <br>
 4) [Docs: OpenCV](http://docs.opencv.org/3.1.0/) <br>
+5) [Docs: ThreeJS](https://threejs.org/) <br>
+6) [Docs: RepRap](http://www.reprap.org/)
