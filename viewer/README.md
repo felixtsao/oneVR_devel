@@ -14,5 +14,5 @@ Player default and current implementation only supports equirectangular projecti
 Launch `index.html` in a web browser to play. Can be hosted online and can be viewed on mobile devices using head mounted displays like cardboard.
 
 <h3> Bugs </h3>
-May need to swipe up on the address bar to enable fullscreen on iOS devices. <br>
-Player may appear to freeze when buffering as no buffering icon is displayed.
+* May need to swipe up on the address bar to enable fullscreen on iOS devices.
+* Player may appear to freeze when buffering as no buffering icon is displayed.
