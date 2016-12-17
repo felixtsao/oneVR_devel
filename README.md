@@ -14,7 +14,7 @@ Project started Spring break 2015 with some good friends and further developed t
 <h3> Directories </h3>
 
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
-`/cpp` - Automated video stitching (in development / incomplete) <br>
+`/cpp` - Automated video stitching (in development, see video tutorial for manual solution) <br>
 `/doc` - Documentation and reference images <br>
 `/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
 `/viewer` - Basic VR 360 video/image player, specify video/image source and projection type in `viewer.js` or rename video to `/video/src.mp4`, then launch `index.html` in a web browser (tested with Chrome and Firefox)
@@ -119,5 +119,11 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
 
 <h3> // TODO </h3>
  * Create automated video stitching template using OpenCV, C++<br>
- * Create stitching template and tutorial for using Blender <br>
+ * Top/bottom camera transform for AFX stitch method using Blender or script<br>
  * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
+ 
+ <h3> Technical References </h3>
+1) [Course: Computational Photography CS534, UW-Madison, Charles Dyer](http://pages.cs.wisc.edu/~dyer/cs534/)
+2) [Text, Ch9, Computer Vision, Szeliski](http://szeliski.org/Book/)
+4) [Paper, ORB Feature Descriptor, Rublee](http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf)
+5) [Docs, OpenCV](http://docs.opencv.org/3.1.0/)
