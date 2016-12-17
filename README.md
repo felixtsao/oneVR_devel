@@ -123,7 +123,7 @@ Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web
  * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
  
  <h3> Technical References </h3>
-1) [Course: Computational Photography CS534, UW-Madison, Charles Dyer](http://pages.cs.wisc.edu/~dyer/cs534/)
-2) [Text, Ch9, Computer Vision, Szeliski](http://szeliski.org/Book/)
-4) [Paper, ORB Feature Descriptor, Rublee](http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf)
-5) [Docs, OpenCV](http://docs.opencv.org/3.1.0/)
+1) [Course: Computational Photography CS534, UW-Madison, Charles Dyer](http://pages.cs.wisc.edu/~dyer/cs534/) <br>
+2) [Text, Ch9, Computer Vision, Szeliski](http://szeliski.org/Book/) <br>
+4) [Paper, ORB Feature Descriptor, Rublee](http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf) <br>
+5) [Docs, OpenCV](http://docs.opencv.org/3.1.0/) <br>
