@@ -21,10 +21,8 @@ Project started Spring break 2015 with some good friends and further developed t
 
 <h3> Multi-camera system overview </h3>
 
-<center>
 <img src="doc/img/sj4000_6x_01.jpg" alt="Version 2" width="420px"/>
 <img src="doc/img/sj4000_6x_v3_01.jpg" alt="Version 3" width="420px"/>
-</center>
 
 Version 2 left, pictured without upper mount. Version 3 on right with optional top camera expansion module.
 
