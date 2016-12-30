@@ -105,16 +105,6 @@ Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 w
 <h5> Creating a new camera mount </h5>
 Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to millimeter for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
-<h4> Exhibit: An Extended Mobile Application Prototype </h4>
-<img src="http://exhibit.felixtsao.com/promo.jpg" alt="Exhibit" width="820px"/>
-
-<h5> Mobile application description </h5>
-Exhibit is a hybrid, cross-platform mobile application that explores the new and exciting virtual reality experience of viewing homes, apartments and new properties. With a few swipes, users can navigate an intuitive search feature and instantly find themselves standing in the room they want to see via photosphere or videosphere. Users can look around as if they're actually at the property which is made possible through the sophisticated use of gyroscopic sensors and projective geometry. For sellers, adding or modifying listings happens instantly and easily through a Parse database. From home owners to budding and mature businesses, Exhibit aims to bring the best places, to the best people, in the best way. Made with some cool friends.
-
-<h5> To preview the app </h5>
-Visit [exhibit.felixtsao.com](https://exhibit.felixtsao.com) on a smartphone web browser
-<p>
-
 <h3> // TODO </h3>
  * Create automated video stitching template using OpenCV, C++<br>
  * Top/bottom camera transform for AFX stitch method using Blender or script<br>
