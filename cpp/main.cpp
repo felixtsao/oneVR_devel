@@ -11,6 +11,8 @@
 //     challenge is reduced to recovering angles between cameras
 //     i.e. translation in the video plane space.
 //
+//     Developed using OpenCV 3.1.0 release and Ubuntu 16.04
+//
 //     Written using feature descriptors from OpenCV. This code is free to be
 //     copied and modified and adheres to the same OpenCV license below.
 //
@@ -121,7 +123,7 @@ int getFeatures(
     detector->detectAndCompute(img1, cv::Mat(), keypoints1, descriptors1);
     detector->detectAndCompute(img2, cv::Mat(), keypoints2, descriptors2);
 
-    // Determine matching pairs
+    // Determine matching pairs via Euclidean distance
     cv::BFMatcher matcher(cv::NORM_L2);
     std::vector<cv::DMatch> matches;
     matcher.match(descriptors1, descriptors2, matches);
@@ -134,7 +136,7 @@ int getFeatures(
         if(dist > max_dist) max_dist = dist;
     }
 
-    // Draw only "good" matches i.e. whose distance is less than 3 * min_dist
+    // Draw only "good" matches i.e. those that are less than 3 * min_dist
     for(int i = 0; i < descriptors1.rows; i++){
         if(matches[i].distance < 3 * min_dist) goodMatches.push_back(matches[i]);
     }
@@ -145,6 +147,7 @@ int getFeatures(
         std::vector<char>(), cv::DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 
     // Localize the object
+    /*
     std::vector<cv::Point2f> img1pt;
     std::vector<cv::Point2f> img2pt;
     for(int i = 0; i < (int) goodMatches.size(); i++){
@@ -152,8 +155,11 @@ int getFeatures(
         img1pt.push_back(keypoints1[goodMatches[i].queryIdx].pt);
         img2pt.push_back(keypoints2[goodMatches[i].trainIdx].pt);
     }
+    */
 
-    imshow("Matches", img_matches);
+    //cv::imshow("Matches", img_matches);
+    //imwrite("match.jpg", img_matches);
+    //cv::waitKey(0);
 
     return 0;
 
@@ -297,32 +303,116 @@ int projectMaskSpherical(cv::Mat &I, cv::Mat&O, double f){
 
 // Compute translation homography between 2 adjacent images
 // -----------------------------------------------------------------------------
-int buildHomography(
+int estimateHomography(
     std::vector<cv::KeyPoint>& kpNew, std::vector<cv::KeyPoint>& kpCur,
-    std::vector<cv::DMatch>& goodMatches, cv::Mat& homography){
+    std::vector<cv::DMatch>& matches, cv::Mat& homography){
 
-    int matches = (int) goodMatches.size();
+    int nMatches = (int) matches.size();
 
-    std::cout << matches << " feature point matches" << std::endl;
+    std::cout << nMatches << " feature point matches" << std::endl;
 
+    //int trials = 500;
+    int trials = nMatches;
     double xTrans = 0;
     double yTrans = 0;
+    double tolerance = 3.0; // pixels
+    int xQual = 0, yQual = 0; // 0 for bad, 1 for good, within tolerance
+    int concensus = 0;
+    int maxConcensus = 0;
+    int bestX = 0;
+    int bestY = 0;
 
-    //matches = 1; // temp override for testing, delete this later
-    for (int i = 0; i < matches; i++) {
+    srand(0);
 
-        double xNew = kpNew[goodMatches[i].queryIdx].pt.x;
-        double xCur = kpCur[goodMatches[i].trainIdx].pt.x;
-        xTrans += xCur - xNew;
 
-        double yNew = kpNew[goodMatches[i].queryIdx].pt.y;
-        double yCur = kpCur[goodMatches[i].trainIdx].pt.y;
-        yTrans += yCur - yNew;
+    // RANSAC
+
+    if(nMatches < trials) std::cout << "Less matches than trials" << std::endl;
+
+    // Estimate quality is high at around 500 iterations
+    for (int i = 0; i < trials; i++) {
+
+        // Inititialize
+        xQual = 0;
+        yQual = 0;
+        concensus = 0;
+
+        int featureNumber = rand() % nMatches; // Choose random feature pair
+        //std::cout << "ftNumb " << featureNumber << std::endl;
+
+        // Use as reference
+        double xReferenceNew = kpNew[matches[featureNumber].queryIdx].pt.x;
+        double xReferenceCur = kpCur[matches[featureNumber].trainIdx].pt.x;
+        double yReferenceNew = kpNew[matches[featureNumber].queryIdx].pt.y;
+        double yReferenceCur = kpCur[matches[featureNumber].trainIdx].pt.y;
+
+        // Shift estimate
+        xTrans = xReferenceCur - xReferenceNew;
+        yTrans = yReferenceCur - yReferenceNew;
+        //std::cout << "xTrans " << xTrans << std::endl;
+        //std::cout << "yTrans " << yTrans << std::endl;
+
+        // Check against all other features
+        for (int j = 0; j < nMatches; j++) {
+
+            if (j == featureNumber) continue; // Skip reference feature
+
+            // Estimate x translation
+            double xNew = kpNew[matches[j].queryIdx].pt.x;
+            double xCur = kpCur[matches[j].trainIdx].pt.x;
+            double xEstimate = xCur - xNew;
+            //std::cout << "xEstimate " << xEstimate << std::endl;
+
+            // Estimate y translation
+            double yNew = kpNew[matches[j].queryIdx].pt.y;
+            double yCur = kpCur[matches[j].trainIdx].pt.y;
+            double yEstimate = yCur - yNew;
+            //std::cout << "yEstimate " << yEstimate << std::endl;
+
+            // Check if estimate is good against ground truth
+            //std::cout << "diffX " << fabs(xTrans - xEstimate) << std::endl;
+            //std::cout << "diffY " << fabs(yTrans - yEstimate) << std::endl;
+            if(fabs(xTrans - xEstimate) < tolerance) xQual = 1;
+            if(fabs(yTrans - yEstimate) < tolerance) yQual = 1;
+            if(xQual && yQual) concensus++;
+
+        }
+
+        if(concensus > maxConcensus){
+            //std::cout << "ever?" << std::endl;
+            maxConcensus = concensus;
+            bestX = xTrans;
+            bestY = yTrans;
+        }
 
     }
 
-    homography.at<double>(0, 2) = xTrans / matches;
-    homography.at<double>(1, 2) = yTrans / matches;
+    /*
+    // Averaging translation
+    //matches = 1; // temp override for testing, delete this later
+    for (int i = 0; i < nMatches; i++) {
+
+        double xNew = kpNew[matches[i].queryIdx].pt.x;
+        double xCur = kpCur[matches[i].trainIdx].pt.x;
+        xTrans += xCur - xNew;
+
+        double yNew = kpNew[matches[i].queryIdx].pt.y;
+        double yCur = kpCur[matches[i].trainIdx].pt.y;
+        yTrans += yCur - yNew;
+
+    }
+    */
+
+    // If no good concensus, just pick the most recent reference
+    if (bestX == 0)
+        bestX = xTrans;
+    if (bestY == 0)
+        bestY = yTrans;
+
+    homography.at<double>(0, 2) = bestX;
+    homography.at<double>(1, 2) = bestY;
+    //std::cout << bestX << std::endl;
+    //std::cout << bestY << std::endl;
 
     return 0;
 
@@ -437,7 +527,8 @@ int main(int argc, char ** argv) {
     // Project and store input images ------------------------------------------
 
     double f = 600; // Camera focal length parameter (unknown units, not mm)
-    f = 2800; // LA skyline lens (300mm ish)
+    //f = 2800; // LA skyline lens (300mm ish)
+    f = 10000000000; // SF Marin Headlands (Moto G4)
     Projection projection = SPHERICAL;
     std::vector<cv::Mat> src; // Store input images
     std::vector<cv::Mat> blendMasks; // Store alpha channel blend masks for images
@@ -500,16 +591,16 @@ int main(int argc, char ** argv) {
         std::vector<cv::KeyPoint> keypoints2; // neighbors's keypoints
         cv::Mat descriptors1; // curr's
         cv::Mat descriptors2; // neighbor's
-        std::vector<cv::DMatch> goodMatches;
+        std::vector<cv::DMatch> matches;
 
-        getFeatures(curr, left, keypoints1, keypoints2, descriptors1, descriptors2, goodMatches);
+        getFeatures(curr, left, keypoints1, keypoints2, descriptors1, descriptors2, matches);
 
         cv::Mat H = (cv::Mat_<double>(3,3) << // Modify this to relate curr image to neighbor
             1, 0, 0,
             0, 1, 0,
             0, 0, 1);
 
-        buildHomography(keypoints1, keypoints2, goodMatches, H); // Find translation
+        estimateHomography(keypoints1, keypoints2, matches, H); // Find translation
 
         cv::Mat warped = cv::Mat::zeros(out.rows, out.cols, out.type()); // Translated image
         cv::Mat newMask = cv::Mat::zeros(out.rows, out.cols, CV_64F);
@@ -521,11 +612,11 @@ int main(int argc, char ** argv) {
             0, 1, 0,
             0, 0, 1);
 
-        // Stack all previous translations and add new homography for curr image
+        // Stack all previous translations and...
         C.at<double>(0, 2) += hStack[i - 1].at<double>(0, 2);
         C.at<double>(1, 2) += hStack[i - 1].at<double>(1, 2);
 
-        // Also add current translation
+        //...add new homography for curr image
         C.at<double>(0, 2) += H.at<double>(0, 2);
         C.at<double>(1, 2) += H.at<double>(1, 2);
 
@@ -546,8 +637,9 @@ int main(int argc, char ** argv) {
 
     cv::imwrite("panorama.jpg", out);
 
-    cv::imshow("panorama", out);
-    cv::waitKey(0);
+    //cv::imshow("panorama", out);
+    //cv::waitKey(0);
+
 
 
     return 0;
