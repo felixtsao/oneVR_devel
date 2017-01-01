@@ -1,5 +1,5 @@
 # One VR
-<img src="doc/img/banner.jpg" alt="Banner" width="900px"/>
+<img src="img/doc/banner.jpg" alt="Banner" width="900px"/>
 <h3> A low-cost, DIY, end-to-end 360/VR solution concept </h3>
 <p>
 A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
@@ -9,7 +9,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 
 <h3> Pipeline </h3>
-<img src="doc/img/pl.jpg" alt="Pipeline" width="900px"/>
+<img src="img/doc/pl.jpg" alt="Pipeline" width="900px"/>
 
 <h3> Directories </h3>
 
@@ -21,8 +21,8 @@ Project started Spring break 2015 with some good friends and further developed t
 
 <h3> Multi-camera system overview </h3>
 
-<img src="doc/img/sj4000_6x_01.jpg" alt="Version 2" width="420px"/>
-<img src="doc/img/sj4000_6x_v3_01.jpg" alt="Version 3" width="420px"/>
+<img src="img/doc/sj4000_6x_01.jpg" alt="Version 2" width="420px"/>
+<img src="img/doc/sj4000_6x_v3_01.jpg" alt="Version 3" width="420px"/>
 
 Version 2 left, pictured without upper mount. Version 3 on right with optional top camera expansion module.
 
@@ -36,7 +36,7 @@ Captures monoscopic video in 360 degrees horizontal and ~135 degrees vertical. S
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Search [3DHubs](https://www.3dhubs.com) to find access to a nearby 3D printer. Some libraries have printers as well. Or build your own [RepRap](http://www.reprap.org) as a support project.
 
 <h5> Hardware </h5>
-<img src="doc/img/bom.jpg" alt="Bill of Materials" width="900px"/>
+<img src="img/doc/bom.jpg" alt="Bill of Materials" width="900px"/>
 <b>a.</b> 6 or more SJ4000 action cameras (~$60 each), Alternatives include GoPro, Xiaomi (may need to modify 3D models). Can use less cameras by replacing stock lenses with wide angle lenses for Xiaomi and SJ4000.
 <br>
 <b> b. </b> A lower bracket/apparatus to seat cameras. Modify existing CAD designs in `/cam` directory to meet camera choice.
@@ -72,7 +72,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 (Optional) Switch to gen-lock/sync record controls for cameras, necessary to mitigate rolling shutter when capturing scenes with fast motion, also provides convenience for starting/stopping recording, requires soldering
 <center>
-<img src="doc/img/genlock_switch.jpg" alt="Genlock Switch" width="420px"/>
+<img src="img/doc/genlock_switch.jpg" alt="Genlock Switch" width="420px"/>
 <center>
 <p>
 
@@ -99,8 +99,8 @@ Print camera mount yourself or find a local printer through [3DHubs](https://www
 
 Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 with Red PLA. The mount takes about 4 hours to print if things go smoothly! Newer version of mount printed on an open-source Prusa i3 design, right, with a layer height of 0.27mm through a 0.4mm extruder nozzle.
 
-<img src="/doc/img/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
-<img src="/doc/img/sj4000_6x_v3_prusai3.jpg" alt="Prusa i3" width="420px"/>
+<img src="/img/doc/sj4000_6x_makerbot.jpg" alt="Makerbot" width="420px"/>
+<img src="/img/doc/sj4000_6x_v3_prusai3.jpg" alt="Prusa i3" width="420px"/>
 
 <h5> Creating a new camera mount </h5>
 Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to millimeter for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
