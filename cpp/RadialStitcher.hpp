@@ -61,45 +61,55 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-// Standard
-#include <iostream>
+#include <vector>
 
-// Radial Stitcher
-#include "RadialStitcher.hpp"
+#include <opencv2/opencv.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 
-// How to use this program
+// Radial Stitcher Class reads in images and stitches them along horizontal
+// axis.
 // -----------------------------------------------------------------------------
-int usage(){
-    std::cout << std::endl;
-    std::cout << "Usage:" << std::endl;
-    std::cout << "    ./radStitch <image1> <image2> ... <imageN>" << std::endl;
-    std::cout << std::endl;
-    std::cout << "Constraints:" << std::endl;
-    std::cout << "    1) Stitcher assumes inputs are taken from radially symmetric viewpoints relative to a single optical center" << std::endl;
-    std::cout << "    2) Specified adjacent images must overlap and share common features" << std::endl;
-    std::cout << std::endl;
-    exit(1);
+class RadialStitcher {
+
+    public:
+
+        RadialStitcher(int numImages, char ** fileNames);
+        ~RadialStitcher();
+
+        // Main stitching process
+        int Stitch();
+
+        // Image prewarp options
+        enum Projection{ CYLINDRICAL, SPHERICAL };
+
+
+    private:
+
+        // Stitcher Parameters
+        int numImages;
+        double focalLength;
+        Projection projection;
+
+        // Images and Masks
+        std::vector<cv::Mat> src; // Stores input images
+        std::vector<cv::Mat> blendMasks; // Store alpha channel blend masks for images in src
+        std::vector<cv::Mat> transforms; // Translation matrices for all images rel. to 1st
+
+        // Feature point information, rewritten over course of stitching
+        std::vector<cv::KeyPoint> keypoints1; // curr image keypoints
+        std::vector<cv::KeyPoint> keypoints2; // neighbor image keypoints
+        std::vector<cv::DMatch> matches; // feature pairs
+
+        // Auxiliary functions
+        int buildBlendMask(cv::Mat& img, cv::Mat& mask);
+        int projectCylindrical(cv::Mat &I, cv::Mat&O, double focalLength);
+        int projectSpherical(cv::Mat &I, cv::Mat&O, double focalLength);
+        int projectMaskSpherical(cv::Mat &I, cv::Mat&O, double focalLength);
+        int projectMaskCylindrical(cv::Mat &I, cv::Mat&O, double focalLength);
+        int blend(cv::Mat& newImage, cv::Mat& canvas, cv::Mat& newMask, cv::Mat& canvasMask);
+        int estimateHomography(cv::Mat& homography);
+        int getFeatures(cv::Mat& img1, cv::Mat& img2);
+
 };
-
-
-// Panorama stitcher program
-// -----------------------------------------------------------------------------
-int main(int argc, char ** argv) {
-
-    if(argc < 3) usage(); // Need at least 2 images
-    int numImages = argc - 1;
-
-    // Load in images to stitcher
-    RadialStitcher * rs = new RadialStitcher(numImages, argv);
-
-    // Try stitching images
-    if(rs->Stitch()) std::cout << "Stitch failed." << std::endl;;
-
-    delete rs;
-
-    return 0;
-
-}
