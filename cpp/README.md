@@ -19,6 +19,7 @@ After compilation, still in same directory, to stitch images, run:
 ```
 ./radStitch <image1> <image2> ... <imageN>
 ```
+Test with images found in `/img/pano`
 <p>
 <i>Current constraints:</i>
 <br>
