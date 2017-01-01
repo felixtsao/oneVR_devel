@@ -15,7 +15,7 @@ Project started Spring break 2015 with some good friends and further developed t
 
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching (in development, see video tutorial below for manual solution) <br>
-`/doc` - Documentation and reference images <br>
+`/img` - Documentation, reference and source images <br>
 `/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
 `/viewer` - Basic VR 360 video/image player for web browsers
 
