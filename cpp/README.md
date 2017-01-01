@@ -1,6 +1,6 @@
 # Radial Stitcher (radStitch)
 
-<img src="panorama.jpg" alt="Banner" width="900px"/>
+<img src="../img/doc/panorama.jpg" alt="Banner" width="900px"/>
 
 A simple panorama stitcher. Assumes input images are taken from radially symmetric viewpoints relative to common optical center--like the camera shown on the main page and like the Google Jump camera. Uses OpenCV feature description to generate matching landmarks between adjacent images. Requires OpenCV to be installed in order to compile. Works with OpenCV 3.1.0 installed on Ubuntu 16.04
 
