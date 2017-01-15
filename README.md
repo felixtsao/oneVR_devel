@@ -78,11 +78,18 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 <h5> Software list </h5>
  * [OpenSCAD](http://www.openscad.org) for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
- * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free 30-day trial, then monthly subscription)
+ * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free trial, then monthly subscription or modify a XML file for unlimited trials <i> see below </i>)
  * (Optional) Stitching plugins for After Effects like [Skybox Mettle](http://www.mettle.com/product/skybox/), [PTGui](https://www.ptgui.com/), [Kolor](http://www.kolor.com/) or [VideoStitch](http://www.video-stitch.com/) for professional stitching results (> $90)
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
  * [YouTube 360 Injector](https://support.google.com/youtube/answer/6178631?hl=en) for tagging proper metadata to final 360 video for properly uploading to YouTube (Free)
  * (Optional) [OpenCV](http://opencv.org/) for determining relative positioning between video streams, for developing `/cpp` (Free)
+ 
+ <h5> Unlimited After Effects Trials </h5>
+Be sure to install the After Effects Trial from the official Adobe website. <br>
+1) When trial expires, navigate to the following install directory i.e. on Windows `C:\Program Files\Adobe\Adobe After Effects CC 2017\Support Files\AMT` <br>
+2) In `application.xml` find the data holder `<Data key="TrialSerialNumber">XXXXXXXXXXXXXXXXXXXXXXXX</Data>`. Simply change one of the characters in the existing serial number, save the file and boot After Effects. You should be asked if you want to start a trial.
+<p>
+<i>Last tested with AFX CC 2017 in January 2017. </i>
 
 <h3> Stitching Techniques</h3>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
