@@ -73,6 +73,7 @@
 
 // Radial Stitcher
 #include "RadialStitcher.hpp"
+#include "VectorSpace.hpp"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -84,6 +85,7 @@ RadialStitcher::RadialStitcher(int numImages, char ** fileNames){
     this->numImages = numImages;
     projection = SPHERICAL;
     focalLength = 2800; // LA Skyline (300mm)
+    focalLength = 2800; // SF Golden Gate (Moto G4 Camera)
 
     // ...and warp and store input images
     for (int i = 0; i < numImages; i++) {
@@ -336,7 +338,7 @@ int RadialStitcher::getFeatures(cv::Mat& img1, cv::Mat& img2){
     matcher.match(descriptors1, descriptors2, approxMatches);
 
     // Find minimum keypoint error
-    double minDist = 100;
+    double minDist = 1000;
     for(int i = 0; i < descriptors1.rows; i++){
         double dist = approxMatches[i].distance;
         if(dist < minDist) minDist = dist;
@@ -344,7 +346,7 @@ int RadialStitcher::getFeatures(cv::Mat& img1, cv::Mat& img2){
 
     // Keep only "good" matches i.e. those that are less than 3 * minDist
     for(int i = 0; i < descriptors1.rows; i++){
-        if(approxMatches[i].distance < 3 * minDist) matches.push_back(approxMatches[i]);
+        if(approxMatches[i].distance < 6 * minDist) matches.push_back(approxMatches[i]);
     }
 
     /*
@@ -371,107 +373,130 @@ int RadialStitcher::estimateHomography(cv::Mat& homography){
 
     std::cout << nMatches << " feature point matches" << std::endl;
 
-    //int trials = 500;
-    int trials = nMatches;
-    double xTrans = 0;
-    double yTrans = 0;
-    double tolerance = 3.0; // pixels
-    int xQual = 0, yQual = 0; // 0 for bad, 1 for good, within tolerance
+    int trials = 4000;
+    double tolerance = 4.0; // pixels
     int concensus = 0;
     int maxConcensus = 0;
-    int bestX = 0;
-    int bestY = 0;
+    Matrix bestHomography(3,3);
 
     srand(0);
 
     // RANSAC
 
-    if(nMatches < trials) std::cout << "Less matches than trials" << std::endl;
+    if(nMatches < 4) std::cout << "Not enough feature pairs" << std::endl;
 
     // Estimate quality is high at around 500 iterations
     for (int i = 0; i < trials; i++) {
 
         // Inititialize
-        xQual = 0;
-        yQual = 0;
         concensus = 0;
 
-        int featureNumber = rand() % nMatches; // Choose random feature pair
+        //int featureNumber = rand() % nMatches; // Choose random feature pair
+        int featureNumber = 1; // Choose random feature pair
         //std::cout << "ftNumb " << featureNumber << std::endl;
 
-        // Use as reference
-        double xReferenceNew = keypoints1[matches[featureNumber].queryIdx].pt.x;
-        double xReferenceCur = keypoints2[matches[featureNumber].trainIdx].pt.x;
-        double yReferenceNew = keypoints1[matches[featureNumber].queryIdx].pt.y;
-        double yReferenceCur = keypoints2[matches[featureNumber].trainIdx].pt.y;
+        // Solve Ah = b for h
+        // h contains homography between image pair
 
-        // Shift estimate
-        xTrans = xReferenceCur - xReferenceNew;
-        yTrans = yReferenceCur - yReferenceNew;
-        //std::cout << "xTrans " << xTrans << std::endl;
-        //std::cout << "yTrans " << yTrans << std::endl;
+        // Feature pair coordinates between images A and B
+        double ax[4];
+        double bx[4];
+        double ay[4];
+        double by[4];
+
+        // Choose 4 feature pairs at random, sample without replacement
+        int ft[4];
+        for (int j = 0; j < 4; j++) { ft[j] = rand() % nMatches; }
+
+
+        // Store for convenience to build matrix A to find homography
+        for (int k = 0; k < 4; k++) {
+            ax[k] = keypoints1[matches[ft[k]].queryIdx].pt.x;
+            bx[k] = keypoints2[matches[ft[k]].trainIdx].pt.x;
+            ay[k] = keypoints1[matches[ft[k]].queryIdx].pt.y;
+            by[k] = keypoints2[matches[ft[k]].trainIdx].pt.y;
+        }
+
+
+        Matrix A(8,8); // Fill in A to solve Ah = b using LU decomposition
+
+        A(0,0) = bx[0]; A(0,1) = by[0]; A(0,2) = 1; A(0,3) = 0; A(0,4) = 0; A(0,5) = 0; A(0,6) = -bx[0] * ax[0]; A(0,7) = -by[0] * ax[0];
+
+        A(1,0) = bx[1]; A(1,1) = by[1]; A(1,2) = 1; A(1,3) = 0; A(1,4) = 0; A(1,5) = 0; A(1,6) = -bx[1] * ax[1]; A(1,7) = -by[1] * ax[1];
+
+        A(2,0) = bx[2]; A(2,1) = by[2]; A(2,2) = 1; A(2,3) = 0; A(2,4) = 0; A(2,5) = 0; A(2,6) = -bx[2] * ax[2]; A(2,7) = -by[2] * ax[2];
+
+        A(3,0) = 0; A(3,1) = 0; A(3,2) = 0; A(3,3) = bx[0]; A(3,4) = by[0]; A(3,5) = 1; A(3,6) = -bx[0] * ay[0]; A(3,7) = -by[0] * ay[0];
+
+        A(4,0) = 0; A(4,1) = 0; A(4,2) = 0; A(4,3) = bx[1]; A(4,4) = by[1]; A(4,5) = 1; A(4,6) = -bx[1] * ay[1]; A(4,7) = -by[1] * ay[1];
+
+        A(5,0) = 0; A(5,1) = 0; A(5,2) = 0; A(5,3) = bx[2]; A(5,4) = by[2]; A(5,5) = 1; A(5,6) = -bx[2] * ay[2]; A(5,7) = -by[2] * ay[2];
+
+        A(6,0) = 0; A(6,1) = 0; A(6,2) = 0; A(6,3) = bx[3]; A(6,4) = by[3]; A(6,5) = 1; A(6,6) = -bx[3] * ay[3]; A(6,7) = -by[3] * ay[3];
+
+        A(7,0) = bx[3]; A(7,1) = by[3]; A(7,2) = 1; A(7,3) = 0; A(7,4) = 0; A(7,5) = 0; A(7,6) = -bx[3] * ax[3]; A(7,7) = -by[3] * ax[3];
+
+
+        Vector b(8);
+
+        b[0] = ax[0]; b[1] = ax[1]; b[2] = ax[2]; b[3] = ay[0]; b[4] = ay[1]; b[5] = ay[2]; b[6] = ay[3]; b[7] = ax[3];
+
+
+        // Estimate homography
+        Vector h(8);
+        h = b/A;
+
+        Matrix H(3,3); // Estimated homography matrix
+        H(0,0) = h[0]; H(0,1) = h[1]; H(0,2) = h[2]; H(1,0) = h[3]; H(1,1) = h[4]; H(1,2) = h[5]; H(2,0) = h[6]; H(2,1) = h[7]; H(2,2) = 1;
+
+        //std::cout << "H:" << std::endl; H.print();
 
         // Check against all other features
         for (int j = 0; j < nMatches; j++) {
 
-            if (j == featureNumber) continue; // Skip reference feature
+            if (j == ft[0] || j == ft[1] || j == ft[2] || j == ft[3]) continue; // Skip features used in estimation
+
+            // Push this through estimated homography and see how much error to ground truth
+            Vector t(3); // Test point
+            Vector a(3); // Actual, ground truth
 
             // Estimate x translation
-            double xNew = keypoints1[matches[j].queryIdx].pt.x;
-            double xCur = keypoints2[matches[j].trainIdx].pt.x;
-            double xEstimate = xCur - xNew;
-            //std::cout << "xEstimate " << xEstimate << std::endl;
+            a[0] = keypoints1[matches[j].queryIdx].pt.x; // New
+            t[0] = keypoints2[matches[j].trainIdx].pt.x; // Curr
 
             // Estimate y translation
-            double yNew = keypoints1[matches[j].queryIdx].pt.y;
-            double yCur = keypoints2[matches[j].trainIdx].pt.y;
-            double yEstimate = yCur - yNew;
-            //std::cout << "yEstimate " << yEstimate << std::endl;
+            a[1] = keypoints1[matches[j].queryIdx].pt.y;
+            t[1] = keypoints2[matches[j].trainIdx].pt.y;
 
-            // Check if estimate is good against ground truth
-            //std::cout << "diffX " << fabs(xTrans - xEstimate) << std::endl;
-            //std::cout << "diffY " << fabs(yTrans - yEstimate) << std::endl;
-            if(fabs(xTrans - xEstimate) < tolerance) xQual = 1;
-            if(fabs(yTrans - yEstimate) < tolerance) yQual = 1;
-            if(xQual && yQual) concensus++;
+            a[2] = t[2] = 1; // Homogenized
+
+            Vector e(3); // Estimation via homography
+            e = H * t;
+
+            Vector diff(3); diff = e - a;
+
+            // Check against ground truth
+            double error = L2Norm(diff);
+            //std::cout << "error: " << error << std::endl;
+            if(error < tolerance) concensus++;
 
         }
 
         if(concensus > maxConcensus){
             //std::cout << "ever?" << std::endl;
             maxConcensus = concensus;
-            bestX = xTrans;
-            bestY = yTrans;
+            bestHomography = H;
         }
 
     }
 
-    /*
-    // Averaging translation
-    //matches = 1; // temp override for testing, delete this later
-    for (int i = 0; i < nMatches; i++) {
+    //std::cout << "best H:" << std::endl; bestHomography.print();
 
-        double xNew = kpNew[matches[i].queryIdx].pt.x;
-        double xCur = kpCur[matches[i].trainIdx].pt.x;
-        xTrans += xCur - xNew;
-
-        double yNew = kpNew[matches[i].queryIdx].pt.y;
-        double yCur = kpCur[matches[i].trainIdx].pt.y;
-        yTrans += yCur - yNew;
-
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            homography.at<double>(i,j) = -bestHomography(i,j);
+        }
     }
-    */
-
-    // If no good concensus, just pick the most recent reference
-    if (bestX == 0)
-        bestX = xTrans;
-    if (bestY == 0)
-        bestY = yTrans;
-
-    homography.at<double>(0, 2) = bestX;
-    homography.at<double>(1, 2) = bestY;
-    //std::cout << bestX << std::endl;
-    //std::cout << bestY << std::endl;
 
     return 0;
 
