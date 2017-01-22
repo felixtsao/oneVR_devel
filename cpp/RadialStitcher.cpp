@@ -85,7 +85,7 @@ RadialStitcher::RadialStitcher(int numImages, char ** fileNames){
     this->numImages = numImages;
     projection = SPHERICAL;
     focalLength = 2800; // LA Skyline (300mm)
-    focalLength = 2800; // SF Golden Gate (Moto G4 Camera)
+    //focalLength = 800; // SF Golden Gate (Moto G4 Camera)
 
     // ...and warp and store input images
     for (int i = 0; i < numImages; i++) {
@@ -350,6 +350,7 @@ int RadialStitcher::getFeatures(cv::Mat& img1, cv::Mat& img2){
     }
 
     /*
+    // Debugging, show feature matches
     cv::Mat img_matches;
     drawMatches(img1, keypoints1, img2, keypoints2,
         matches, img_matches, cv::Scalar::all(-1), cv::Scalar::all(-1),
@@ -365,7 +366,7 @@ int RadialStitcher::getFeatures(cv::Mat& img1, cv::Mat& img2){
 }
 
 
-// Compute translation homography between 2 adjacent images
+// Compute relative perspective between 2 adjacent images
 // -----------------------------------------------------------------------------
 int RadialStitcher::estimateHomography(cv::Mat& homography){
 
@@ -373,10 +374,10 @@ int RadialStitcher::estimateHomography(cv::Mat& homography){
 
     std::cout << nMatches << " feature point matches" << std::endl;
 
-    int trials = 4000;
-    double tolerance = 4.0; // pixels
-    int concensus = 0;
-    int maxConcensus = 0;
+    int trials = 2000;
+    double tolerance = 3.0; // pixels
+    int concensus = 0; // Keeps track of how well a homography performs
+    int maxConcensus = 0; // Best homography results
     Matrix bestHomography(3,3);
 
     srand(0);
@@ -385,15 +386,10 @@ int RadialStitcher::estimateHomography(cv::Mat& homography){
 
     if(nMatches < 4) std::cout << "Not enough feature pairs" << std::endl;
 
-    // Estimate quality is high at around 500 iterations
     for (int i = 0; i < trials; i++) {
 
-        // Inititialize
+        // Reset
         concensus = 0;
-
-        //int featureNumber = rand() % nMatches; // Choose random feature pair
-        int featureNumber = 1; // Choose random feature pair
-        //std::cout << "ftNumb " << featureNumber << std::endl;
 
         // Solve Ah = b for h
         // h contains homography between image pair
@@ -494,7 +490,7 @@ int RadialStitcher::estimateHomography(cv::Mat& homography){
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            homography.at<double>(i,j) = -bestHomography(i,j);
+            homography.at<double>(i,j) = bestHomography(i,j);
         }
     }
 
@@ -563,7 +559,7 @@ int RadialStitcher::Stitch(){
     cv::Mat first = src[0];
 
     // Output mosaic/canvas
-    cv::Mat out = cv::Mat::zeros(1.2 * first.rows, first.cols + ((numImages - 1) * 0.5 * first.cols), first.type());
+    cv::Mat out = cv::Mat::zeros(2 * first.rows, first.cols + ((numImages - 1) * 0.5 * first.cols), first.type());
 
     // 3x3 Identity
     cv::Mat Id = (cv::Mat_<double>(3,3) <<
@@ -591,44 +587,35 @@ int RadialStitcher::Stitch(){
         cv::Mat curr = src[i]; // Current image to stitch in...
         cv::Mat left = src[(i - 1) % numImages]; // ...And its left neighbor image
 
-        getFeatures(curr, left);
+        getFeatures(left, curr);
 
         cv::Mat H = (cv::Mat_<double>(3,3) << // Modify this to relate curr image to neighbor
-            1, 0, 0,
-            0, 1, 0,
-            0, 0, 1);
+            0, 0, 0,
+            0, 0, 0,
+            0, 0, 0);
 
-        estimateHomography(H); // Find translation
+        estimateHomography(H); // Find relative perspective to neighbor
+        //std::cout << "H" << std::endl;
+        //std::cout << H << std::endl;
+
+        // Chain with previous homographies
+        cv::Mat C = transforms[i - 1] * H;
+
+        //std::cout << "C" << std::endl;
+        //std::cout << C << std::endl;
 
         cv::Mat warped = cv::Mat::zeros(out.rows, out.cols, out.type()); // Translated image
         cv::Mat newMask = cv::Mat::zeros(out.rows, out.cols, CV_64F);
 
-        // Use this matrix to find the chain of transformations relating curr
-        // image to the first image
-        cv::Mat C = (cv::Mat_<double>(3,3) <<
-            1, 0, 0,
-            0, 1, 0,
-            0, 0, 1);
-
-        // Stack all previous translations and...
-        C.at<double>(0, 2) += transforms[i - 1].at<double>(0, 2);
-        C.at<double>(1, 2) += transforms[i - 1].at<double>(1, 2);
-
-        //...add new homography for curr image
-        C.at<double>(0, 2) += H.at<double>(0, 2);
-        C.at<double>(1, 2) += H.at<double>(1, 2);
-
         transforms.push_back(C);
         warpPerspective(curr, warped, C, warped.size()); // Warp curr image
         warpPerspective(blendMasks[i], newMask, C, newMask.size()); // And its mask
-        //std::cout << "here?" << std::endl;
 
         // Get its left neighbor's mask
         cv::Mat prevMask = cv::Mat::zeros(out.rows, out.cols, CV_64F);
         warpPerspective(blendMasks[i - 1], prevMask, transforms[i - 1], prevMask.size());
 
         // Blend and add to panorama
-        //out = 0.5 * warped + 0.5 * out; // Add to panorama
         blend(warped, out, newMask, prevMask);
 
     }
