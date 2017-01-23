@@ -95,7 +95,7 @@ Be sure to install the After Effects Trial from the official Adobe website. <br>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
 Compile and run stitcher in `\cpp` (Currently only works for image sequences) <p>
 
-Stitcher uses ORB feature descriptor which is free from patent restrictions.
+Stitcher uses ORB feature descriptor pairs to register overlapping images. ORB is also free from patent restrictions.
 <img src="img/doc/r8match.jpg" alt="Feature Matches" width="900px"/>
 <img src="img/doc/r8.jpg" alt="Feature Matches" width="900px"/>
 
