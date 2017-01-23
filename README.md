@@ -93,7 +93,11 @@ Be sure to install the After Effects Trial from the official Adobe website. <br>
 
 <h3> Stitching Techniques</h3>
 [Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
-Compile and run OpenCV stitcher in `\cpp` (Currently only works for image sequences)
+Compile and run stitcher in `\cpp` (Currently only works for image sequences) <p>
+
+Stitcher uses ORB feature descriptor which is free from patent restrictions.
+<img src="img/doc/r8match.jpg" alt="Feature Matches" width="900px"/>
+<img src="img/doc/r8.jpg" alt="Feature Matches" width="900px"/>
 
 <h3> Viewing </h3>
 Web VR 360 Player - [Demo Link](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/index.html)
