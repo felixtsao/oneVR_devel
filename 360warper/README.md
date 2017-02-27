@@ -1,6 +1,6 @@
 #360warper
 
-<img src="img/doc/umbc.jpg" alt="UMBC" width="900px"/>
+<img src="../img/doc/umbc.jpg" alt="UMBC" width="900px"/>
 
 A standalone image/video warper created to be used with video compositing tools like After Effects, Blender, Nuke etc. to create 360 video.
 
