@@ -1,29 +1,28 @@
-    A standalone image/video warper created to be used with video compositing
-    tools like After Effects, Blender, Nuke etc. to create 360 video.
+#360warper   
 
-    To see the accompanying YouTube tutorial visit:
-    https://www.youtube.com/watch?v=F78drmyd21I
+A standalone image/video warper created to be used with video compositing tools like After Effects, Blender, Nuke etc. to create 360 video.
 
-    To run warper, open a terminal and change to directory (cd command)
-    containing all necessary files i.e.
+To see the accompanying YouTube tutorial visit:
+https://www.youtube.com/watch?v=F78drmyd21I
 
-        warp.py
-        360warper
-        settings.txt
-        ffmpeg (3.2.4 included here, visit ffmpeg.org for more info)
-        < Any image/video files to warp >(.mp4, .jpg, .png)
+To run warper, open a terminal and change to directory (`cd` command) containing all necessary files i.e.
 
-    Confirm and change parameters in 'settings.txt' file for desired use
+    warp.py
+    360warper
+    settings.txt
+    ffmpeg (3.2.4 included here, visit ffmpeg.org for more info)
+    < Any image/video files to warp >(.mp4, .jpg, .png)
 
-    When ready to warp images/videos, type in the terminal command:
+Confirm and change parameters in 'settings.txt' file for desired use
 
-        ./warp.py video1.mp4 video2.mp4 checkerboard.jpg ...
+When ready to warp images/videos, type in the terminal command:
 
-    Warping process will run. May take some time.
+    ./warp.py video1.mp4 video2.mp4 checkerboard.jpg ...
 
-    Process will automatically create and delete a temporary working directory
-        called '/temp' in the same directory.
+Warping process will run. May take some time.
 
-    Warped videos will be saved as originalName_warped.mp4 in same directory
+Process will automatically create and delete a temporary working directory called `/temp` in the same directory.
 
-    Warped images will be saved as originalName_warped.jpg in same directory
+Warped videos will be saved as `originalName_warped.mp4` in same directory
+
+Warped images will be saved as `originalName_warped.jpg` in same directory
