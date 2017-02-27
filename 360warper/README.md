@@ -1,4 +1,6 @@
-#360warper   
+#360warper
+
+<img src="img/doc/umbc.jpg" alt="UMBC" width="900px"/>
 
 A standalone image/video warper created to be used with video compositing tools like After Effects, Blender, Nuke etc. to create 360 video.
 
@@ -13,7 +15,7 @@ To run warper, open a terminal and change to directory (`cd` command) containing
     ffmpeg (3.2.4 included here, visit ffmpeg.org for more info)
     < Any image/video files to warp >(.mp4, .jpg, .png)
 
-Confirm and change parameters in 'settings.txt' file for desired use
+Confirm and change parameters in `settings.txt` file for desired use
 
 When ready to warp images/videos, type in the terminal command:
 
