@@ -1,3 +1,6 @@
+    A standalone image/video warper created to be used with video compositing
+    tools like After Effects, Blender, Nuke etc. to create 360 video.
+
     To see the accompanying YouTube tutorial visit:
     https://www.youtube.com/watch?v=F78drmyd21I
 
