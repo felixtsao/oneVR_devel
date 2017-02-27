@@ -13,6 +13,7 @@ Project started Spring break 2015 with some good friends and further developed t
 
 <h3> Directories </h3>
 
+`/360warper` - A standalone image/video warper created to be used with video compositing tools like AFX, Blender, Nuke<br>
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching (in development, see video tutorial below for manual solution) <br>
 `/img` - Documentation, reference and source images <br>
@@ -83,18 +84,12 @@ Listed below are items I have tested but any of them can be swapped out with oth
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
  * [YouTube 360 Injector](https://support.google.com/youtube/answer/6178631?hl=en) for tagging proper metadata to final 360 video for properly uploading to YouTube (Free)
  * (Optional) [OpenCV](http://opencv.org/) for determining relative positioning between video streams, for developing `/cpp` (Free)
- 
- <h5> Unlimited After Effects Trials </h5>
-Be sure to install the After Effects Trial from the official Adobe website. <br>
-1) When trial expires, navigate to the following install directory i.e. on Windows `C:\Program Files\Adobe\Adobe After Effects CC 2017\Support Files\AMT` <br>
-2) In `application.xml` find the data holder `<Data key="TrialSerialNumber">XXXXXXXXXXXXXXXXXXXXXXXX</Data>`. Simply change one of the characters in the existing serial number, save the file and boot After Effects. You should be asked if you want to start a trial.
-<p>
-<i>Last tested with AFX CC 2017 in January 2017. </i>
 
 <h3> Stitching Techniques</h3>
-[Video Tutorial: After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
+[Video Tutorial: Hand-stitching in After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
+[Video Tutorial: Hand-stitching updated](https://www.youtube.com/watch?v=F78drmyd21I)<br>
 <i>or</i> <br>
-Compile and run stitcher in `/cpp` (Currently only works for image sequences) <p>
+For fully automated process,compile and run stitcher in `/cpp` (still in the works) <p>
 
 Stitcher uses ORB feature descriptor pairs to register overlapping images. ORB is also free from patent restrictions.
 <img src="img/doc/r8match.jpg" alt="Feature Matches" width="900px"/>
@@ -118,8 +113,8 @@ Older version of `mono_lower_6x_sj4000.stl` printed on a Makerbot Replicator 2 w
 Files are located in `/cam` directory, organized by camera model. To create a new camera mount, open the closest existing `.scad` file and adapt it by changing the camera trench dimensions. Camera dimensions are listed as variables at the top of the `.scad` files and should globally change the trench sizes across the mount. To add more cameras, simply increase the distance of the optical center and make additional copies of the trenches and assign each trench with the appropriate angle. The numbers are technically unitless but they default to millimeter for most printers. Be sure to add 1 to the value used for the camera dimension for a little breathing room.
 
 <h3> // TODO </h3>
- * Create automated video stitching template using OpenCV, C++<br>
- * Top/bottom camera transform for AFX stitch method using Blender or script<br>
+ * Create automated video stitching (Implement feature detector)
+ * <strike>Top/bottom camera transform for AFX stitch method using Blender or script</strike><br>
  * <strike>Make video tutorial for hand-stitching 360 videos in AFX</strike>
  
 
