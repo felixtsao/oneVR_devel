@@ -1,5 +1,7 @@
 # web360viewer
 
+This viewer is deprecated. Visit [Aframe](https://aframe.io) for a better 360/VR web viewer.
+<p>
 Basic JavaScript/WebGL 360 video/photo viewer for web browsers. Works best on Chrome.
 <p>
 [Example](https://cdn.rawgit.com/felixtsao/oneVR_devel/master/viewer/index.html)

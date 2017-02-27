@@ -1,0 +1,70 @@
+// For additional information, check the readme.txt or
+// see the accompanying YouTube tutorial at:
+// https://www.youtube.com/watch?v=F78drmyd21I
+//
+// Settings file for 360warper. Please specify the following options below to
+// let the warper know how to properly warp/project your image/video.
+// You must specify the effective field of view (fov) or program will not run.
+// For all other settings, if not specified in this file, 360warper will use
+// the following default values: (r = up = k1 = k2 = k3 = clip = debug = 0)
+// Default resolution is 4096 x 2048. You can tell the program to ignore certain
+// lines of settings by typing any character at the beginning of the line. e.g.
+// this comment block has "//" before each line. The setting below is ignored
+// fov 120
+// Be sure a setting's keyword begins immediately at the beginning of the line
+// followed by a single space and then the value to guarantee proper function.
+//
+// resolution:
+//     Target horizontal equirectangular output resolution, vertical
+//     resolution is automatically chosen to be half the horizontal i.e.
+//     2:1 aspect ratio
+// up:
+//     Enables up/top camera warping. Set true (1) to enable or set false (0) to
+//     project input image/video to side/equator of sphere
+// fov:
+//     Effective field of view after distortion correction. This may not be
+//     the same field of view advertised by camera product labels since some
+//     pixels become unusable after distortion correction. See camera presets.
+// k1, k2, k3:
+//     Lens distortion correction values. If your camera has lens correction
+//     settings from the manufacturer, it is recommended to use those and then
+//     use all zeros for k1, k2, k3 for no distortion correction. Also see
+//     camera presets below to use correct values for k1, k2, k3. You may also
+//     experimentally determine k1, k2, k3 by taking an image of a checkerboard
+//     and changing values until the lines become straight or use other
+//     programs like ImageMagick, OpenCV, Numpy, Matlab etc...
+// clip:
+//     You usually want this on when rendering entire video streams. Set true
+//     (1) to clip away any part of the frame that input image/video does not
+//     project to. Set false (2) to include the rest of the 360 frame. This is
+//     helpful when you want to see how a single image/video looks in 360 since
+//     the frame maintains the correct proportions when shown in a 360 viewer.
+// debug:
+//     Draw longitude and latitude lines over warped video.
+
+
+// Choose settings below
+// ------------------------------------------------------------------
+
+resolution 4096
+up 0
+r -90 
+clip 1
+debug 0
+fov 97.32
+k1 0.27
+k2 -0.0232
+k3 -0.006
+
+// ------------------------------------------------------------------
+// Choose settings above
+
+// Presets:
+// Xiaomi Yi Action Camera (Sony EXMOR R Sensor, Ambarella A7LS processor)
+// fov 97.32
+// k1 0.27
+// k2 -0.0232
+// k3 -0.006
+
+// -----------------------------------------------------------------
+// Author: hello@felixtsao.com
