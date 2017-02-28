@@ -28,3 +28,8 @@ Process will automatically create and delete a temporary working directory calle
 Warped videos will be saved as `originalName_warped.mp4` in same directory
 
 Warped images will be saved as `originalName_warped.jpg` in same directory
+
+<h3> // TODO </h3>
+* Pipeline and multi-thread the code more for CPU
+* Implement GPU version
+* Learn ffmpeg and avlib and interface directly with warper program to replace the current random python hack.
