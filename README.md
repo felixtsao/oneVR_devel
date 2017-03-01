@@ -7,6 +7,10 @@ A virtual reality, 360 camera system along with a cross-platform (iOS & Android)
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro.
 <p>
 Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
+<p>
+<h4> Example results </h4>
+* [4K UMBC](https://www.youtube.com/watch?v=F78drmyd21I) <br>
+* [4K Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
 
 <h3> Pipeline </h3>
 <img src="img/doc/pl.jpg" alt="Pipeline" width="900px"/>
@@ -31,7 +35,7 @@ Captures monoscopic video in 360 degrees horizontal and ~135 degrees vertical. S
 <p>
 6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 5 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution. If planning to build with SJ4000s oriented vertically, using 7 cameras is probably a safer option.
 <p>
-[4K Demo Footage](https://www.youtube.com/watch?v=a_FUM7AA19g)
+
 
 <h3> Bill of Materials - Hardware & Software </h3>
 Listed below are items I have tested but any of them can be swapped out with other items that serve a similar purpose. Search [3DHubs](https://www.3dhubs.com) to find access to a nearby 3D printer. Some libraries have printers as well. Or build your own [RepRap](http://www.reprap.org) as a support project.
