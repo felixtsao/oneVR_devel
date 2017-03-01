@@ -9,7 +9,7 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 <p>
 <h4> Example results </h4>
-* [4K UMBC](https://www.youtube.com/watch?v=F78drmyd21I) <br>
+* [4K UMBC](https://www.youtube.com/watch?v=hQ7O1qrUY-8) <br>
 * [4K Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
 
 <h3> Pipeline </h3>
