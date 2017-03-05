@@ -9,8 +9,8 @@ Designs based around using off-the-shelf hardware/software. Parameterized 3D mod
 Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 <p>
 <h4> Example results </h4>
-* [4K UMBC](https://www.youtube.com/watch?v=hQ7O1qrUY-8) <br>
-* [4K Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
+* [4K/60fps UMBC](https://www.youtube.com/watch?v=hQ7O1qrUY-8) <br>
+* [4K/60fps Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
 
 <h3> Pipeline </h3>
 <img src="img/doc/pl.jpg" alt="Pipeline" width="900px"/>
@@ -21,7 +21,6 @@ Project started Spring break 2015 with some good friends and further developed t
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching (in development, see video tutorial below for manual solution) <br>
 `/img` - Documentation, reference and source images <br>
-`/mlab` - MATLAB prototype for a basic panorama stitching algorithm from a class, for learning and reference <br>
 `/viewer` - Basic VR 360 video/image player for web browsers
 
 <h3> Multi-camera system overview </h3>
