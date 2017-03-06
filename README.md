@@ -2,7 +2,7 @@
 <img src="img/doc/banner.jpg" alt="Banner" width="900px"/>
 <h3> A low-cost, DIY, end-to-end 360/VR solution concept </h3>
 <p>
-A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
+A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing. Example SJ4000 rig is sub-$500.
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro.
 <p>
@@ -82,15 +82,14 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 <h5> Software list </h5>
  * [OpenSCAD](http://www.openscad.org) for rapid, parameterized prototyping of 3D printable VR camera mounts (Free)
- * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free trial, then monthly subscription or modify a XML file for unlimited trials <i> see below </i>)
+ * [After Effects CC](http://www.adobe.com/products/aftereffects.html) for basic stitching using warp plugins (Free trial, then monthly subscription)
  * (Optional) Stitching plugins for After Effects like [Skybox Mettle](http://www.mettle.com/product/skybox/), [PTGui](https://www.ptgui.com/), [Kolor](http://www.kolor.com/) or [VideoStitch](http://www.video-stitch.com/) for professional stitching results (> $90)
  * [Blender](https://www.blender.org/) for alternative stitching method to After Effects, also includes capabilites to composite text and 3D. (Free)
  * [YouTube 360 Injector](https://support.google.com/youtube/answer/6178631?hl=en) for tagging proper metadata to final 360 video for properly uploading to YouTube (Free)
- * (Optional) [OpenCV](http://opencv.org/) for determining relative positioning between video streams, for developing `/cpp` (Free)
 
 <h3> Stitching Techniques</h3>
-[Video Tutorial: Hand-stitching in After Effects](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
-[Video Tutorial: Hand-stitching updated](https://www.youtube.com/watch?v=F78drmyd21I)<br>
+[Video Tutorial: Hand-stitching in After Effects (Quick)](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
+[Video Tutorial: Hand-stitching (Detailed)](https://www.youtube.com/watch?v=F78drmyd21I)<br>
 <i>or</i> <br>
 For fully automated process,compile and run stitcher in `/cpp` (still in the works) <p>
 
