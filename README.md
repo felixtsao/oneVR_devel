@@ -2,9 +2,9 @@
 <img src="img/doc/banner.jpg" alt="Banner" width="900px"/>
 <h3> A low-cost, DIY, end-to-end 360/VR solution concept </h3>
 <p>
-A virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing. Example SJ4000 rig is sub-$500.
+A low-cost virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
-Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro.
+Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro. The example SJ4000 rig is costs less than $500 to build.
 <p>
 Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 <p>
