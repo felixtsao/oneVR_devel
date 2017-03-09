@@ -7,6 +7,10 @@ A standalone image/video warper created to be used with video compositing tools 
 To see the accompanying YouTube tutorial visit:
 https://www.youtube.com/watch?v=F78drmyd21I
 
+Transforms raw footage from camera to correct projection onto a spherical/equirectangular map for 360 video. Shown below is an example of projection to the top/north pole and projection to side/equator of the 360 viewing sphere.
+
+<img src="../img/doc/warperVis.jpg" alt="UMBC" width="900px"/>
+
 To run warper, open a terminal and change to directory (`cd` command) containing all necessary files i.e.
 
     warp.py
