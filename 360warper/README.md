@@ -8,8 +8,6 @@ To see the accompanying YouTube tutorial visit:
 https://www.youtube.com/watch?v=F78drmyd21I
 
 Transforms raw footage from camera to correct projection onto a spherical/equirectangular map for 360 video. Shown below is an example of projection to the top/north pole and projection to side/equator of the 360 viewing sphere.
-<p>
-Lens distortion correction can also be handled by `360warper`. Use the presets in the `settings.txt` file or experimentally determine the correct distortion for desired camera by taking images of several checkerboards and tweaking the distortion settings in the `settings.txt` file until it looks acceptable.
 
 <img src="../img/doc/warperVis.jpg" alt="UMBC" width="900px"/>
 
@@ -21,7 +19,7 @@ To run warper, open a terminal and change to directory (`cd` command) containing
     ffmpeg (3.2.4 included here, visit ffmpeg.org for more info)
     < Any image/video files to warp >(.mp4, .jpg, .png)
 
-Confirm and change parameters in `settings.txt` file for desired use
+Confirm and change parameters in `settings.txt` file for desired use.
 
 When ready to warp images/videos, type in the terminal command:
 
@@ -34,6 +32,8 @@ Process will automatically create and delete a temporary working directory calle
 Warped videos will be saved as `originalName_warped.mp4` in same directory
 
 Warped images will be saved as `originalName_warped.jpg` in same directory
+
+Lens distortion correction can also be handled by `360warper`. Use the presets in the `settings.txt` file or experimentally determine the correct distortion for desired camera by taking images of several checkerboards and tweaking the distortion settings in the `settings.txt` file until it looks acceptable.
 
 <h3> // TODO </h3>
 * Pipeline and multi-thread the code more for CPU
