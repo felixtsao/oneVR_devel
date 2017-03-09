@@ -3,10 +3,7 @@
 <img src="../img/doc/umbc.jpg" alt="UMBC" width="900px"/>
 
 A standalone image/video warper created to be used with video compositing tools like After Effects, Blender, Nuke etc. to create 360 video.
-
-To see the accompanying YouTube tutorial visit:
-https://www.youtube.com/watch?v=F78drmyd21I
-
+<p>
 Transforms raw footage from camera to correct projection onto a spherical/equirectangular map for 360 video. Shown below is an example of projection to the top/north pole and projection to side/equator of the 360 viewing sphere.
 
 <img src="../img/doc/warperVis.jpg" alt="UMBC" width="900px"/>
@@ -14,6 +11,9 @@ Transforms raw footage from camera to correct projection onto a spherical/equire
 Executables and warper script is available to download for: <br>
 [macOS64](https://mega.nz/#!5UUGCYzC!riW7KApZu_tcmvv7iLBDX5ToDQJTHDBUizHfy2Ga2bs) <br>
 [Win64](https://mega.nz/#!QY81lZrK!gdPLD3h7vp4k75xlDRuZmhUMljWqKGRqeY87K5DeIPQ) <br>
+
+To see the accompanying YouTube tutorial visit:
+https://www.youtube.com/watch?v=F78drmyd21I
 
 To run warper, open a terminal and change to directory (`cd` command) containing all necessary files i.e.
 
