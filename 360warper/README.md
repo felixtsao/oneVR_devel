@@ -11,6 +11,10 @@ Transforms raw footage from camera to correct projection onto a spherical/equire
 
 <img src="../img/doc/warperVis.jpg" alt="UMBC" width="900px"/>
 
+Executables and warper script is available to download for: <br>
+[macOS64](https://mega.nz/#!5UUGCYzC!riW7KApZu_tcmvv7iLBDX5ToDQJTHDBUizHfy2Ga2bs) <br>
+[Win64](https://mega.nz/#!QY81lZrK!gdPLD3h7vp4k75xlDRuZmhUMljWqKGRqeY87K5DeIPQ) <br>
+
 To run warper, open a terminal and change to directory (`cd` command) containing all necessary files i.e.
 
     warp.py
