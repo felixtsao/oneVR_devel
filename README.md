@@ -1,6 +1,6 @@
 # One VR
 <img src="img/doc/banner.jpg" alt="Banner" width="900px"/>
-<h3> A low-cost, DIY, end-to-end 360/VR solution concept </h3>
+<h3> A low-cost, DIY, VR/360 video solution </h3>
 <p>
 A low-cost virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
 <p>
