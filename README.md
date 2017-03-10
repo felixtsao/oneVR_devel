@@ -90,7 +90,7 @@ Listed below are items I have tested but any of them can be swapped out with oth
 
 <h3> Stitching Techniques</h3>
 [Video Tutorial: Hand-stitching in After Effects (Quick)](https://www.youtube.com/watch?v=5elOFvyL4KA) <br>
-[Video Tutorial: Hand-stitching (Detailed)](https://www.youtube.com/watch?v=F78drmyd21I)<br>
+[Video Tutorial: Hand-stitching (Detailed using 360warper script)](https://www.youtube.com/watch?v=F78drmyd21I)<br>
 <i>or</i> <br>
 For fully automated process,compile and run stitcher in `/cpp` (still in the works) <p>
 
