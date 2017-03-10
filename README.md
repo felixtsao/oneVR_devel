@@ -44,7 +44,7 @@ Version 2 left, pictured without upper mount. Version 3 on right with optional t
 
 Captures monoscopic video in 360 degrees horizontal and ~135 degrees vertical. Six individual streams are stitched and blended together into a cohesive panoramic video.
 <p>
-6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 5 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution. If planning to build with SJ4000s oriented vertically, using 7 cameras is probably a safer option.
+6 SJ4000 cameras arranged outwards is just barely enough information to create a 360 video and requires a decent amount of user input to stitch in After Effects. Using 5 SJ4000 cameras seated horizontally would help automated stitching a lot at the cost of some vertical field of view. Using more cameras is ideal, but drives up cost and requires a more powerful computer for stitching. Modifying lenses of the cameras with wider angle replacements is also a solution. If planning to build with out-of-box SJ4000s oriented vertically, using 8 cameras is a safe option, 7 will be bare minimum.
 <p>
 
 
