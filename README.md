@@ -29,7 +29,7 @@ Increasing accessibility of 360 cameras will allow more creative individuals to 
 
 <h3> Directories </h3>
 
-`/360warper` - A standalone image/video warper created to be used with video compositing tools like AFX, Blender, Nuke<br>
+`/360warper` - A standalone image/video warper to be used with video compositing tools like AFX, Blender, Nuke<br>
 `/cam` - 3D printable 360 camera rig files (`.stl`), generator files (`.scad`) and camera control commands <br>
 `/cpp` - Automated video stitching (in development, see video tutorial below for manual solution) <br>
 `/img` - Documentation, reference and source images <br>
