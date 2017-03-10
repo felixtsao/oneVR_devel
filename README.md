@@ -4,7 +4,7 @@
 <p>
 A low-cost, virtual reality, 360 camera system along with a mobile web 360 player application, forms an end-to-end solution; from capture to viewing.
 <p>
-Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro. The example SJ4000 rig costs less than $500 to build.
+Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro. Parameterization also allows scalability to reach 4K resolution and beyond. The example SJ4000 rig costs less than $500 to build and achieves 4K resolution.
 <p>
 Video stitching methods include using accessible software and custom scripts provided by this repository.
 <p>
@@ -16,7 +16,7 @@ Project started Spring break 2015 with some good friends and further developed t
 * [4K/30fps 6x SJ4000 Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
 
 <h3> Motivation </h3>
-360 video is an exciting medium that was recently supported by video sharing sites like [YouTube](www.youtube.com), [Facebook](www.facebook.com) and [Vimeo](www.vimeo.com). Unfortunately, content creation has remained limited due the high cost-of-entry in acquiring 360 cameras and video stitching software. Professional solutions range from thousands to tens of thousands of dollars and has low accessibility. Cost-friendly, consumer 360 cameras exist on the market but are limited to sub 4K resolutions, which suffer from pixelation in 360 playback.
+360 video is an exciting medium that was recently supported by video sharing sites like [YouTube](https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ), [Facebook](http://newsroom.fb.com/news/2015/09/introducing-360-video-on-facebook/) and [Vimeo](https://join.vimeo.com/360/?vcid=30830). Unfortunately, content creation has remained limited due the high cost-of-entry in acquiring 360 cameras and video stitching software. Professional solutions range from thousands to tens of thousands of dollars and has low accessibility. Cost-friendly, consumer 360 cameras exist on the market but are limited to sub 4K resolutions, which suffer from pixelation in 360 playback.
 <p>
 This repository aims to provide a high-quality solution while being accessible to 360 filmmakers on a budget. The optimal target cost for a full 360 video solution is under or around $500.
 <p>
