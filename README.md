@@ -2,16 +2,27 @@
 <img src="img/doc/banner.jpg" alt="Banner" width="900px"/>
 <h3> A low-cost, DIY, VR/360 video solution </h3>
 <p>
-A low-cost virtual reality, 360 camera system along with a cross-platform (iOS & Android) mobile VR viewer application, forms an end-to-end VR solution; from capture to viewing.
+A low-cost, virtual reality, 360 camera system along with a mobile web 360 player application, forms an end-to-end solution; from capture to viewing.
 <p>
 Designs based around using off-the-shelf hardware/software. Parameterized 3D model files allow for easy generation of camera mounts to fit most small, rectangular cameras like GoPro, SJCAM, Xiaomi and NoPro. The example SJ4000 rig costs less than $500 to build.
 <p>
-Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534, and hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
+Video stitching methods include using accessible software and custom scripts provided by this repository.
+<p>
+Project started Spring break 2015 with some good friends and further developed through a Computational Photography class, CS 534. Hardware resources/funding by Garage Physics at University of Wisconsin, Madison.
 <p>
 <h4> Example results </h4>
 * [4K/60fps 8x Xiaomi Yi ITE Building](https://www.youtube.com/watch?v=hQ7O1qrUY-8) <br>
 * [4K/30fps 7x SJ4000 Vibration Test](https://www.youtube.com/watch?v=YHSJdiMrLIY) <br>
 * [4K/30fps 6x SJ4000 Madison Capitol](https://www.youtube.com/watch?v=a_FUM7AA19g)
+
+<h3> Motivation </h3>
+360 video is an exciting medium that was recently supported by video sharing sites like [YouTube](www.youtube.com), [Facebook](www.facebook.com) and [Vimeo](www.vimeo.com). Unfortunately, content creation has remained limited due the high cost-of-entry in acquiring 360 cameras and video stitching software. Professional solutions range from thousands to tens of thousands of dollars and has low accessibility. Cost-friendly, consumer 360 cameras exist on the market but are limited to sub 4K resolutions, which suffer from pixelation in 360 playback.
+<p>
+This repository aims to provide a high-quality solution while being accessible to 360 filmmakers on a budget. The optimal target cost for a full 360 video solution is under or around $500.
+<p>
+Additionally, concensus in the creative community is that a different approach from traditional filmmaking techniques must be used in developing meaningful 360 video. This is because applying panning motions and camera dollys like in traditional film may cause excessive disorientation in 360 video. Another challenge is that users may look in directions that are not intended for by the director/news-anchor.
+<p>
+Increasing accessibility of 360 cameras will allow more creative individuals to contemplate the artistic representation and navigation issues of 360 video. It is only beneficial to allow more people to address the challenge which can improve the collective understanding of art, filmmaking and journalism.
 
 <h3> Pipeline </h3>
 <img src="img/doc/pl.jpg" alt="Pipeline" width="900px"/>
